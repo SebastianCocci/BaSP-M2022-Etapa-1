@@ -116,7 +116,7 @@ main{
 }
 #what-is a{
     position:absolute;
-    margin-left: 73px;
+    left: 73px;
     top: 350px;
 }
 
@@ -215,10 +215,19 @@ main{
 
 }
 #help select{
-    position: absolute;
-    width: 1000;
+    width: 1050px;
     height: 30px;
-    margin-top: 42px;
+    margin-top: 15px;
+}
+#help form textarea{
+    display: block;    
+    margin-top: 15px;
+    width: 1050px;
+    height: 97px;
+    resize: none;
+}
+.btn-oranges{
+    background-color: #FF5500;
 }
 
 footer{
