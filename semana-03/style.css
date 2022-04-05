@@ -100,13 +100,14 @@ main{
 #what-is{
     position: relative;
     height: 400px;
+    border-bottom: 1px solid gray;
 }
 
 #what-is img{
     position: absolute;
     width: 500px;
-    height: 343px;
-    top: 50px;
+    height: 300px;
+    top: 59px;
     right: 20px;
 }
 
@@ -121,7 +122,7 @@ main{
     position: absolute;
     width: 420px;
     height: 200px;
-    top: 149px;
+    top: 135px;
     left: 73px;
     font-size: 20px;
     line-height: 30px;
@@ -130,12 +131,13 @@ main{
 #what-is a{
     position:absolute;
     left: 73px;
-    top: 350px;
+    top: 330px;
 }
 
 #functionalities{
     position: relative;
     height: 400px;
+    border-bottom: 1px solid gray;
 }
 
 #functionalities h2{
@@ -185,11 +187,12 @@ main{
 #why{
     position: relative;
     height: 400px;
+    border-bottom: 1px solid gray;
 }
 
 #why h2{
     position: absolute;
-    top: 52px;
+    top: 50px;
     left: 117px;
     font-size: 30px;
 }
@@ -236,22 +239,27 @@ main{
     height: 30px;
     display: inline;
     margin-top: 50px;
-    margin-left: 15px;
+    margin-left: 10px;
+    border-radius: 3px;
 
 }
 
 #help select{
-    width: 1050px;
+    width: 1040px;
     height: 30px;
     margin-top: 15px;
+    border-radius: 3px;
+    margin-left: 10px;
 }
 
 #help form textarea{
     display: block;    
     margin-top: 30px;
-    width: 1050px;
+    width: 1030px;
     height: 97px;
     resize: none;
+    border-radius: 3px;
+    margin-left: 10px;
 }
 #help .btn{
     margin-top: 30px;
