@@ -1,0 +1,227 @@
+header {
+    clear: both;
+    width: 100%;
+    height: 100px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 0px #FF5500;
+}
+
+h1 {
+    position: absolute;
+    width: 272px;
+    height: 54px;
+    left: 100px;
+    top: 20px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 54px;
+    color: #000000;
+}
+
+.hamb{
+    position: absolute;
+    font-size: 30px;
+    left: 30px;
+    top: 35px;
+    color: #FF5500;
+}
+
+.iconlist {
+    position:absolute;
+    height: 20px;
+    right: 20px;
+    top: 60px;
+}
+
+.icon{
+    display: inline-block;
+}
+
+.icon i{
+    color: black;
+    width: 20px;
+}
+
+nav {
+    position: relative;
+    float:left;
+    width: 288px;
+    height: 2030px;
+    left: 1px;
+    top: 4px;
+    background: #DDDDDD;
+}
+nav input{
+    position: absolute;
+    width: 246px;
+    left: 14px;
+    top: 4px;
+}
+nav h2{
+    position: absolute;
+    top: 33px;
+    left: 5px;
+}
+.bar{
+    position: absolute;
+    display: inline-block;
+    top: 63px;
+    left: 5px;
+}
+.link{
+    position: relative;
+    width: 254px;
+    margin-top: 20px;
+}
+
+main{
+    position: absolute;
+    left:288px;
+}
+.btn{
+    border: #FF5500;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 20px 15px;
+    color: #FF5500;
+    background-color: #FFFFFF;
+    text-decoration: none;
+}
+#what-is{
+    position: relative;
+    height: 400px;
+
+}
+#what-is img{
+    position: absolute;
+    width: 500px;
+    height: 343px;
+    top: 50px;
+    right: 20px;
+}
+#what-is h2{
+    position: absolute;
+    top: 80px;
+    left: 73px;
+    font-size: 30px;
+}
+#what-is p{
+    position: absolute;
+    width: 420px;
+    height: 200px;
+    top: 149px;
+    left: 73px;
+    font-size: 20px;
+    line-height: 30px;
+}
+#what-is a{
+    position:absolute;
+    margin-left: 73px;
+    top: 350px;
+}
+
+#functionalities{
+    position: relative;
+    height: 400px;
+}
+#functionalities h2{
+    position: absolute;
+    top: 50px;
+    left: 44px;
+    font-size: 30px;
+}
+#fun-list{
+    position: relative;
+    display: inline-block;
+    top: 116px;
+    left: 44px;
+    font-size: 70px;
+}
+.fun-item{
+    position: relative;
+    display: inline-block;
+    width: 400px;
+    height: 200px;
+}
+.fun-item h3 {
+    position:absolute;
+    top:0px;
+    left:80px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+}
+.fun-item p {
+    position:absolute;
+    top:30px;
+    left:80px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+#why{
+    position: relative;
+    height: 400px;
+}
+#why h2{
+    position: absolute;
+    top: 80px;
+    left: 73px;
+    font-size: 30px;
+}
+#why img{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50px;
+    right: 142px;}
+.us {
+    position:absolute;
+    height: 20px;
+    left: 73px;
+    top: 120px;
+    }
+.item{
+    margin-top: 10px;
+
+}
+
+#why a{
+    position:absolute;
+    margin-left: 73px;
+    top: 220px;
+    margin-top: 50px;
+    }
+
+#help{
+    position: relative;
+    height: 400px;
+}
+#help h2{
+    position: absolute;
+    left: 73px;
+    font-size: 30px;
+}
+.controls{
+    width: 400px;
+    height: 30px;
+    display: inline;
+    margin-top: 42px;
+
+}
+#help select{
+    position: absolute;
+    width: 1000;
+    height: 30px;
+    margin-top: 42px;
+}
+
+footer{
+    clear:both;
+
+}
