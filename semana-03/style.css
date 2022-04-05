@@ -1,4 +1,4 @@
-header {
+header{
     clear: both;
     width: 100%;
     height: 100px;
@@ -6,7 +6,7 @@ header {
     box-shadow: 0px 4px 0px #FF5500;
 }
 
-h1 {
+h1{
     position: absolute;
     width: 272px;
     height: 54px;
@@ -26,7 +26,11 @@ h1 {
     color: #FF5500;
 }
 
-.iconlist {
+body{
+    overflow-x: hidden;
+}
+
+.iconlist{
     position:absolute;
     height: 20px;
     right: 20px;
@@ -42,32 +46,36 @@ h1 {
     width: 20px;
 }
 
-nav {
+nav{
     position: relative;
     float:left;
     width: 288px;
-    height: 2030px;
+    height: 2230px;
     left: 1px;
     top: 4px;
     background: #DDDDDD;
 }
+
 nav input{
     position: absolute;
     width: 246px;
     left: 14px;
     top: 4px;
 }
+
 nav h2{
     position: absolute;
     top: 33px;
     left: 5px;
 }
+
 .bar{
     position: absolute;
     display: inline-block;
     top: 63px;
     left: 5px;
 }
+
 .link{
     position: relative;
     width: 254px;
@@ -78,20 +86,22 @@ main{
     position: absolute;
     left:288px;
 }
+
 .btn{
-    border: #FF5500;
+    border: 1px solid #FF5500;
     border-radius: 3px;
     display: inline-block;
-    padding: 20px 15px;
+    padding: 15px 30px;
     color: #FF5500;
     background-color: #FFFFFF;
     text-decoration: none;
 }
+
 #what-is{
     position: relative;
     height: 400px;
-
 }
+
 #what-is img{
     position: absolute;
     width: 500px;
@@ -99,12 +109,14 @@ main{
     top: 50px;
     right: 20px;
 }
+
 #what-is h2{
     position: absolute;
     top: 80px;
     left: 73px;
     font-size: 30px;
 }
+
 #what-is p{
     position: absolute;
     width: 420px;
@@ -114,6 +126,7 @@ main{
     font-size: 20px;
     line-height: 30px;
 }
+
 #what-is a{
     position:absolute;
     left: 73px;
@@ -124,12 +137,14 @@ main{
     position: relative;
     height: 400px;
 }
+
 #functionalities h2{
     position: absolute;
     top: 50px;
     left: 44px;
     font-size: 30px;
 }
+
 #fun-list{
     position: relative;
     display: inline-block;
@@ -137,13 +152,15 @@ main{
     left: 44px;
     font-size: 70px;
 }
+
 .fun-item{
     position: relative;
     display: inline-block;
     width: 400px;
-    height: 200px;
+    height: 150px;
 }
-.fun-item h3 {
+
+.fun-item h3{
     position:absolute;
     top:0px;
     left:80px;
@@ -153,7 +170,8 @@ main{
     font-size: 25px;
     line-height: 30px;
 }
-.fun-item p {
+
+.fun-item p{
     position:absolute;
     top:30px;
     left:80px;
@@ -168,69 +186,169 @@ main{
     position: relative;
     height: 400px;
 }
+
 #why h2{
     position: absolute;
-    top: 80px;
-    left: 73px;
+    top: 52px;
+    left: 117px;
     font-size: 30px;
 }
+
 #why img{
     position: absolute;
     width: 300px;
-    height: 300px;
+    height: 250px;
     top: 50px;
-    right: 142px;}
-.us {
+    right: 142px;
+}
+
+.us{
     position:absolute;
     height: 20px;
-    left: 73px;
-    top: 120px;
-    }
+    left: 129px;
+    top: 102px;
+}
+
 .item{
     margin-top: 10px;
-
 }
 
 #why a{
     position:absolute;
-    margin-left: 73px;
+    margin-left: 117px;
     top: 220px;
     margin-top: 50px;
-    }
+}
 
 #help{
     position: relative;
-    height: 400px;
+    height: 350px;
 }
+
 #help h2{
     position: absolute;
     left: 73px;
     font-size: 30px;
 }
+
 .controls{
-    width: 400px;
+    width: 500px;
     height: 30px;
     display: inline;
-    margin-top: 42px;
+    margin-top: 50px;
+    margin-left: 15px;
 
 }
+
 #help select{
     width: 1050px;
     height: 30px;
     margin-top: 15px;
 }
+
 #help form textarea{
     display: block;    
-    margin-top: 15px;
+    margin-top: 30px;
     width: 1050px;
     height: 97px;
     resize: none;
 }
-.btn-oranges{
+#help .btn{
+    margin-top: 30px;
+}
+
+.btn-orange{
+    color: #FFFFFF;
     background-color: #FF5500;
 }
 
-footer{
-    clear:both;
+#history{
+    position: relative;
+    height: 400px;
+}
 
+#history h2{
+    position: absolute;
+    top: 20px;
+    left: 73px;
+    font-size: 30px;
+}
+
+#history img{
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    top: 100px;
+    left: 29px;
+}
+
+#history p{
+    position: absolute;
+    width: 670px;
+    height: 300px;
+    top: 80px;
+    left: 370px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.columns{
+    position: relative;
+    height: 400px;
+}
+
+.box-list{
+    position: absolute;
+    left: 188px;
+    width: 1061px;
+    top: 50px;
+}
+
+.c-item{
+    position: relative;
+    display: inline-block;
+    top: 0px;
+    width: 25%;
+}
+
+.c-item ol{
+    position: absolute;
+    left: 20px;
+    margin: 10px 0px;
+}
+
+.c-item ol li{
+    margin: 10px 0px;
+}
+
+.c-item ol li a{
+    text-decoration: none;
+}
+
+footer{
+    position:relative;
+    clear:both;
+    width: 100%;
+    height: 100px;
+    background: #FFFFFF;
+    border-top: 5px solid #FF5500;
+}
+footer p{
+    position: absolute;
+left: 450px;
+top: 50px;
+}
+.foot-l{
+    position:absolute;
+    height: 20px;
+    top: 10px;
+    right: 674px;
+}
+.foot-i{
+    display: inline-block;
+    margin-right: 5px;
+}
+.foot-i a{
+    color: black;
+    width: 20px;
 }
