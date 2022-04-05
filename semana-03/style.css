@@ -44,6 +44,7 @@ body{
 .icon i{
     color: black;
     width: 20px;
+    margin-right: 10px;
 }
 
 nav{
@@ -59,21 +60,24 @@ nav{
 nav input{
     position: absolute;
     width: 246px;
+    height: 20px;
     left: 14px;
-    top: 4px;
+    top: 20px;
 }
 
 nav h2{
     position: absolute;
-    top: 33px;
-    left: 5px;
+    top: 80px;
+    margin-left: 10px;
+    text-align: left;
 }
 
 .bar{
     position: absolute;
     display: inline-block;
-    top: 63px;
+    top: 90px;
     left: 5px;
+    margin-left: 10px;
 }
 
 .link{
@@ -91,7 +95,7 @@ main{
     border: 1px solid #FF5500;
     border-radius: 3px;
     display: inline-block;
-    padding: 15px 30px;
+    padding: 10px 36px;
     color: #FF5500;
     background-color: #FFFFFF;
     text-decoration: none;
@@ -114,7 +118,7 @@ main{
 #what-is h2{
     position: absolute;
     top: 80px;
-    left: 73px;
+    left: 44px;
     font-size: 30px;
 }
 
@@ -123,14 +127,14 @@ main{
     width: 420px;
     height: 200px;
     top: 135px;
-    left: 73px;
-    font-size: 20px;
+    left: 44px;
+    font-size: 18px;
     line-height: 30px;
 }
 
 #what-is a{
     position:absolute;
-    left: 73px;
+    left: 44px;
     top: 330px;
 }
 
@@ -145,6 +149,7 @@ main{
     top: 50px;
     left: 44px;
     font-size: 30px;
+    text-align: left;
 }
 
 #fun-list{
@@ -190,15 +195,16 @@ main{
 #why h2{
     position: absolute;
     top: 50px;
-    left: 117px;
+    left: 44px;
     font-size: 30px;
+    text-align: left;
 }
 
 #why img{
     position: absolute;
-    width: 300px;
-    height: 250px;
-    top: 50px;
+    width: 380px;
+    height: 280px;
+    top: 35px;
     right: 142px;
 }
 
@@ -210,12 +216,14 @@ main{
 }
 
 .item{
+    right: 70px;
+    position: relative;
     margin-top: 10px;
 }
 
 #why a{
     position:absolute;
-    margin-left: 117px;
+    margin-left: 44px;
     top: 220px;
     margin-top: 50px;
 }
@@ -228,9 +236,10 @@ main{
 
 #help h2{
     position: absolute;
-    left: 73px;
+    left: 44px;
     font-size: 30px;
     top: 25px;
+    text-align: left;
 }
 
 .controls{
@@ -238,7 +247,7 @@ main{
     height: 30px;
     display: inline;
     margin-top: 92px;
-    margin-left: 10px;
+    margin-left: 12px;
     border-radius: 3px;
 
 }
@@ -249,6 +258,7 @@ main{
     margin-top: 15px;
     border-radius: 3px;
     margin-left: 10px;
+    background-color: white
 }
 
 #help form textarea{
@@ -262,6 +272,7 @@ main{
 }
 #help .btn{
     margin-top: 20px;
+    margin-left: 10px;
 }
 
 .btn-orange{
@@ -280,6 +291,7 @@ main{
     top: 20px;
     left: 73px;
     font-size: 30px;
+    text-align: left;
 }
 
 #history img{
@@ -296,7 +308,7 @@ main{
     height: 300px;
     top: 80px;
     left: 370px;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
 }
 
@@ -331,6 +343,7 @@ main{
 
 .c-item ol li a{
     text-decoration: none;
+    color: black;
 }
 
 footer{
@@ -343,14 +356,14 @@ footer{
 }
 footer p{
     position: absolute;
-left: 450px;
+left: 480px;
 top: 50px;
 }
 .foot-l{
     position:absolute;
     height: 20px;
     top: 10px;
-    right: 674px;
+    right: 590px;
 }
 .foot-i{
     display: inline-block;
@@ -358,5 +371,5 @@ top: 50px;
 }
 .foot-i a{
     color: black;
-    width: 20px;
+    margin-right: 20px;
 }
