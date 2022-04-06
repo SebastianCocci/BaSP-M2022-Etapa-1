@@ -171,11 +171,8 @@ main{
     position:absolute;
     top:0px;
     left:80px;
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 25px;
-    line-height: 30px;
 }
 
 .fun-item p{
@@ -314,7 +311,7 @@ main{
 
 .columns{
     position: relative;
-    height: 400px;
+    height: 270px;
 }
 
 .box-list{
