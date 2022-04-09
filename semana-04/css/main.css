@@ -1,6 +1,9 @@
 main{
-    position: absolute;
-    left:288px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
 }
 
 .btn{
@@ -14,174 +17,113 @@ main{
 }
 
 #what-is{
-    position: relative;
-    height: 400px;
     border-bottom: 1px solid gray;
+    height: 580px;
+    
 }
 
 #what-is img{
-    position: absolute;
-    width: 500px;
-    height: 300px;
-    top: 59px;
-    right: 20px;
+    margin-top: 20px;
+    width: 337px;
+    height: 270px;
 }
 
 #what-is h2{
-    position: absolute;
-    top: 80px;
-    left: 44px;
+    margin-top: 20px;
     font-size: 30px;
 }
 
 #what-is p{
-    position: absolute;
-    width: 420px;
-    height: 200px;
-    top: 135px;
-    left: 44px;
+    margin-top: 20px;
     font-size: 18px;
     line-height: 30px;
 }
 
 #what-is a{
-    position:absolute;
-    left: 44px;
-    top: 330px;
 }
 
 #functionalities{
-    position: relative;
-    height: 400px;
+    height: 800px;
     border-bottom: 1px solid gray;
+    text-align: left;
+    justify-content: space-between;
+
 }
 
 #functionalities h2{
-    position: absolute;
-    top: 50px;
-    left: 44px;
     font-size: 30px;
-    text-align: left;
 }
 
 #fun-list{
-    position: relative;
-    display: inline-block;
-    top: 116px;
-    left: 44px;
     font-size: 70px;
 }
 
 .fun-item{
-    position: relative;
-    display: inline-block;
-    width: 400px;
-    height: 150px;
 }
 
 .fun-item h3{
-    position:absolute;
-    top:0px;
-    left:80px;
     font-weight: 400;
     font-size: 25px;
 }
 
 .fun-item p{
-    position:absolute;
-    top:30px;
-    left:80px;
     font-size: 14px;
     line-height: 25px;
 }
 
 #why{
-    position: relative;
-    height: 350px;
+    height: 580px;
     border-bottom: 1px solid gray;
+ 
 }
 
 #why h2{
-    position: absolute;
-    top: 50px;
-    left: 44px;
     font-size: 30px;
-    text-align: left;
+    margin-top: 20px;
 }
 
 #why img{
-    position: absolute;
+    margin-top: 30px;
     width: 380px;
     height: 280px;
-    top: 35px;
-    right: 142px;
 }
 
 .us{
-    position:absolute;
-    height: 20px;
-    left: 129px;
-    top: 102px;
+    height: 100px;
+    font-size: 20px;
+    margin-top: 10px;
+    
 }
 
-.item{
-    right: 70px;
-    position: relative;
-    margin-top: 10px;
+.item{    
 }
 
 #why a{
-    position:absolute;
-    margin-left: 44px;
-    top: 220px;
-    margin-top: 50px;
 }
 
 #help{
-    position: relative;
-    height: 400px;
     border-bottom: 1px solid gray;
+    height: 580px;
 }
 
 #help h2{
-    position: absolute;
-    left: 44px;
     font-size: 30px;
-    top: 25px;
-    text-align: left;
 }
 
 .controls{
-    width: 500px;
-    height: 30px;
-    display: inline;
-    margin-top: 92px;
-    margin-left: 12px;
-    border-radius: 3px;
 
 }
 
 #help select{
-    width: 1040px;
-    height: 30px;
-    margin-top: 15px;
     border-radius: 3px;
-    margin-left: 10px;
     background-color: white
 }
 
 #help form textarea{
-    display: block;    
-    margin-top: 30px;
-    width: 1030px;
-    height: 97px;
     resize: none;
     border-radius: 3px;
-    margin-left: 10px;
 }
 #help .btn{
-    margin-top: 20px;
-    margin-left: 10px;
 }
 
 .btn-orange{
@@ -190,64 +132,36 @@ main{
 }
 
 #history{
-    position: relative;
-    height: 400px;
     border-bottom: 1px solid gray;
+    height: 580px;
 }
 
 #history h2{
-    position: absolute;
-    top: 20px;
-    left: 73px;
     font-size: 30px;
-    text-align: left;
 }
 
 #history img{
-    position: absolute;
-    width: 300px;
-    height: 250px;
-    top: 100px;
-    left: 29px;
 }
 
 #history p{
-    position: absolute;
-    width: 670px;
-    height: 300px;
-    top: 80px;
-    left: 370px;
     font-size: 18px;
     line-height: 30px;
 }
 
 .columns{
-    position: relative;
-    height: 270px;
+    height: 580px;
 }
 
 .box-list{
-    position: absolute;
-    left: 188px;
-    width: 1061px;
-    top: 50px;
 }
 
 .c-item{
-    position: relative;
-    display: inline-block;
-    top: 0px;
-    width: 25%;
 }
 
 .c-item ol{
-    position: absolute;
-    left: 20px;
-    margin: 10px 0px;
 }
 
 .c-item ol li{
-    margin: 10px 0px;
 }
 
 .c-item ol li a{

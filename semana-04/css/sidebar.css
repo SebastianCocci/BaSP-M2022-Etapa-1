@@ -1,21 +1,6 @@
-.iconlist{
-    position:absolute;
-    height: 20px;
-    right: 20px;
-    top: 60px;
-}
-
-.icon{
-    display: inline-block;
-}
-
-.icon i{
-    color: black;
-    width: 20px;
-    margin-right: 10px;
-}
 
 nav{
+    display: none;
     position: relative;
     float:left;
     width: 288px;
@@ -33,7 +18,7 @@ nav input{
     top: 20px;
 }
 
-nav h2{
+nav p{
     position: absolute;
     top: 80px;
     margin-left: 10px;
