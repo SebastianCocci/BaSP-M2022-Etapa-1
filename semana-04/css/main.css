@@ -1,155 +1,85 @@
 main{
     display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-}
-
-.btn{
-    border: 1px solid #FF5500;
-    border-radius: 3px;
-    display: inline-block;
-    padding: 10px 36px;
-    color: #FF5500;
-    background-color: #FFFFFF;
-    text-decoration: none;
+    padding: 35px;
 }
 
 #what-is{
-    border-bottom: 1px solid gray;
-    height: 580px;
+    display: flex;
+    flex-direction: column;
+}
+
+#what-is button{
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+    #what-is{
+        flex-direction: row-reverse;
+        border-bottom: 1px solid gray;
+    }
     
+    #what-is img{
+        margin-bottom: 20px;
+    }
+
+    .what-info{
+        flex-basis: 45%;
+        margin-right: 15px;
+        margin-bottom: 20px;
+    }
+
+    .btn{
+        border: 1px solid #FF5500;
+        border-radius: 3px;
+        padding: 10px 36px;
+        color: #FF5500;
+        background-color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    #what-is button{
+        display: inline;
+    }
+
 }
 
-#what-is img{
-    margin-top: 20px;
-    width: 337px;
-    height: 270px;
-}
-
-#what-is h2{
-    margin-top: 20px;
-    font-size: 30px;
-}
-
-#what-is p{
-    margin-top: 20px;
-    font-size: 18px;
-    line-height: 30px;
-}
-
-#what-is a{
-}
 
 #functionalities{
-    height: 800px;
-    border-bottom: 1px solid gray;
-    text-align: left;
-    justify-content: space-between;
-
+    display: flex;
+    flex-direction: column;
 }
 
 #functionalities h2{
-    font-size: 30px;
 }
 
 #fun-list{
-    font-size: 70px;
 }
 
 .fun-item{
 }
 
 .fun-item h3{
-    font-weight: 400;
-    font-size: 25px;
 }
 
 .fun-item p{
-    font-size: 14px;
-    line-height: 25px;
 }
 
-#why{
-    height: 580px;
-    border-bottom: 1px solid gray;
- 
-}
 
-#why h2{
-    font-size: 30px;
-    margin-top: 20px;
-}
-
-#why img{
-    margin-top: 30px;
-    width: 380px;
-    height: 280px;
-}
-
-.us{
-    height: 100px;
-    font-size: 20px;
-    margin-top: 10px;
-    
-}
-
-.item{    
-}
-
-#why a{
-}
-
-#help{
-    border-bottom: 1px solid gray;
-    height: 580px;
-}
-
-#help h2{
-    font-size: 30px;
-}
-
-.controls{
-
-}
-
-#help select{
-    border-radius: 3px;
-    background-color: white
-}
-
-#help form textarea{
-    resize: none;
-    border-radius: 3px;
-}
-#help .btn{
-}
-
-.btn-orange{
-    color: #FFFFFF;
-    background-color: #FF5500;
-}
-
-#history{
-    border-bottom: 1px solid gray;
-    height: 580px;
-}
-
-#history h2{
-    font-size: 30px;
-}
 
 #history img{
+    width: 300px;
+    height: 250px;
 }
 
 #history p{
-    font-size: 18px;
-    line-height: 30px;
 }
 
 .columns{
-    height: 580px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
 }
 
 .box-list{
@@ -162,9 +92,100 @@ main{
 }
 
 .c-item ol li{
+    margin: 10px 0px;
 }
 
-.c-item ol li a{
+.c-item ol li a{    
     text-decoration: none;
     color: black;
 }
+@media screen and (min-width: 768px) {
+    .columns{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+/* main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 38px;
+    margin-right: 38px;
+}
+
+.btn {
+    border: 1px solid #FF5500;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 10px 36px;
+    color: #FF5500;
+    background-color: #FFFFFF;
+    text-decoration: none;
+}
+
+#what-is img {
+    width: 400px;
+    height: 270px;
+    margin-top: 30px;
+}
+
+#what-is p {
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+#what-is a {
+    display: none;
+}
+
+#why img {
+    width: 400px;
+    margin-top: 30px;
+}
+
+.us {
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+#why a {
+    margin-top: 10px;
+}
+#help h2 {
+    margin-top: 30px;
+}
+
+.controls{
+    border-radius: 3px;
+    Width: 350px;
+    Height: 37px;
+    margin-top: 15px;
+}
+
+#help select {
+    width: 360px;
+    height: 37px;
+    margin-top: 15px;
+    border-radius: 3px;
+    background-color: white
+}
+
+#help textarea {
+    Width: 350px;
+    Height: 97px;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+
+#help .btn{
+    margin-top: 15px;
+    justify-items: space-between;
+}
+
+.btn-orange{
+    color: #FFFFFF;
+    background-color: #FF5500;
+}
+
+#history img{
+    margin-top: 30px;
+} */
