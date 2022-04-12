@@ -12,6 +12,10 @@ main{
     border-bottom: 1px solid gray;
 }
 
+#what-is img{
+    align-self: center;
+}
+
 #what-is button{
     display: none;
 }
@@ -30,7 +34,7 @@ main{
 }
 
 #fun-list{
-    margin-bottom: 30px;
+    margin: 30px 0px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -46,8 +50,12 @@ main{
     border-bottom: 1px solid gray;
 }
 
-#why .btn{
-    display: block;
+#why img{
+    align-self: center;
+}
+
+#why button{/*
+    max-width: 40%;  */
 }
 
 
@@ -62,24 +70,17 @@ main{
     }
 
     #what-is button{
-        max-width: 40%;
         display: block;
         margin-bottom: 15px;
     }
-    
-    #functionalities{
-        border-bottom: 1px solid gray;
-    }
-    
-    #fun-list{        
+
+    .fun-item{
         display: flex;
-        flex-direction: column;
-        margin-bottom: 30px;
+        font-size: 50px;
         gap: 20px;
     }
-    
-    .fun-item{
-        font-size: 70px;
+    .fun-item i{
+        width: 10%;
     }
 }
 
@@ -102,13 +103,34 @@ main{
     }
 
     #what-is button{
-        max-width: 40%;
-        display: block;
-    }
-    #what-is button{
         display: block;
         margin-bottom: 15px;
     }
+
+    #fun-list{
+        margin-bottom: 30px;
+        flex-flow: row wrap;
+        gap: 20px;
+    }
+    .fun-item{
+        width: 45%;
+    }
+
+    #why{
+        flex-direction: row-reverse;
+    }
+    
+    #why img{
+        margin: 15px;
+    }
+
+    .why-info{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+        margin-right: 15px;
+        margin-bottom: 20px
 
 }
 

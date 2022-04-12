@@ -36,7 +36,7 @@ nav input{
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1024px) {
     nav{
         display: block;
     }
