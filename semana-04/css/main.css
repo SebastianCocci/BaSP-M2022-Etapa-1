@@ -1,10 +1,12 @@
-*{outline: 2px solid red}
+*{outline: 2px solid green}
 main{
     display: flex;
     flex-direction: column;
     padding: 35px;
     justify-content: center;
 }
+
+/*  WHAT IS */
 
 #what-is{
     display: flex;
@@ -14,6 +16,11 @@ main{
 
 #what-is img{
     align-self: center;
+    width: 100%;
+}
+
+#what-is p{
+    margin-bottom: 20px;
 }
 
 #what-is button{
@@ -28,6 +35,8 @@ main{
     background-color: #FFFFFF;
     text-decoration: none;
 }
+
+/*  FUCTIONALITIES */
 
 #functionalities{
     border-bottom: 1px solid gray;
@@ -44,6 +53,8 @@ main{
     font-size: 40px;
 }
 
+/*  WHY TRACKGENIX */
+
 #why{
     display: flex;
     flex-direction: column;
@@ -54,9 +65,65 @@ main{
     align-self: center;
 }
 
-#why button{/*
-    max-width: 40%;  */
+#why button{
 }
+
+/*  FORM */
+
+#help{
+    display: flex;
+    flex-direction: column;
+}
+
+#help form{
+    display: flex;
+    flex-direction: column;
+}
+
+.controls{
+    border-radius: 3px;
+    Width: 100%;
+    Height: 37px;
+    margin-top: 15px;
+}
+
+#help select {
+    width: 102%;
+    height: 37px;
+    margin-top: 15px;
+    border-radius: 3px;
+    background-color: white
+}
+
+#help textarea {
+    Width: 100%;
+    Height: 97px;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+
+.formbtn{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#help .btn{
+    margin-top: 15px;
+}
+
+.btn-orange{
+    color: #FFFFFF;
+    background-color: #FF5500;
+}
+
+/*  OUR HISTORY */
+
+#history{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
 
 
 @media screen and (min-width: 481px){
@@ -64,15 +131,23 @@ main{
         width: 70%;
     }
 
+    /* WHAT IS */
+
     #what-info{
         width: 80%
+    }
 
+    #what-is img{
+        width: 80%;
     }
 
     #what-is button{
         display: block;
         margin-bottom: 15px;
+        align-self: baseline;
     }
+
+    /* FUNCTIONALITIES */
 
     .fun-item{
         display: flex;
@@ -81,6 +156,25 @@ main{
     }
     .fun-item i{
         width: 10%;
+    }
+
+    /* FORM */
+
+    #help form{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .controls{
+        Width: 47%;
+    }
+
+    .formbtn{
+        display: flex;
+        gap: 0px 40px;
+        margin-bottom: 20px;
     }
 }
 
@@ -91,6 +185,7 @@ main{
     
     #what-is img{
         margin-bottom: 20px;
+        width: 100%;
     }
 
     .what-info{
@@ -105,6 +200,7 @@ main{
     #what-is button{
         display: block;
         margin-bottom: 15px;
+        align-self: baseline;
     }
 
     #fun-list{
@@ -131,14 +227,27 @@ main{
         justify-content: space-between;
         margin-right: 15px;
         margin-bottom: 20px
+    }
+
+    /*  OUR HISTORY */
+
+    #history{
+        flex-direction: row;
+    }
+
+    #history img{
+        width: 40%;
+        height: auto;
+    }
+    .texth{
+        width: 45%;
+        margin-left: 20px;
+    }
+
 
 }
 
 
-#history img{
-    width: 300px;
-    height: 250px;
-}
 
 #history p{
 }
