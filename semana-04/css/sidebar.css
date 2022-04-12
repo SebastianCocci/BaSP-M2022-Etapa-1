@@ -1,42 +1,39 @@
 
 nav{
     display: none;
-    position: relative;
-    float:left;
-    width: 288px;
-    height: 2230px;
-    left: 1px;
-    top: 4px;
     background: #DDDDDD;
-}
-
-nav input{
-    position: absolute;
-    width: 246px;
-    height: 20px;
-    left: 14px;
-    top: 20px;
+    width: 20%;
 }
 
 nav p{
-    position: absolute;
-    top: 80px;
-    margin-left: 10px;
+    margin-left: 15px;
     text-align: left;
+}
+nav input{
+    width: 70%;
+    margin: 15px;
 }
 
 .bar{
-    position: absolute;
-    display: inline-block;
-    top: 90px;
-    left: 5px;
     margin-left: 10px;
 }
 
 .link{
-    position: relative;
-    width: 254px;
     margin-top: 20px;
+}
+
+@media screen and (min-width: 481px){
+    .conteiner{
+        display: flex;
+        flex-direction: row;
+    }
+    nav{
+        display: block;
+        flex: 1;
+    }
+    main{
+        flex: 3;
+    }
 }
 
 @media screen and (min-width: 900px) {

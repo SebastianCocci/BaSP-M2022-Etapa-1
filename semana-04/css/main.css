@@ -1,22 +1,91 @@
+*{outline: 2px solid red}
 main{
     display: flex;
     flex-direction: column;
     padding: 35px;
+    justify-content: center;
 }
 
 #what-is{
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid gray;
 }
 
 #what-is button{
     display: none;
 }
 
-@media screen and (min-width: 900px) {
+.btn{
+    border: 1px solid #FF5500;
+    border-radius: 3px;
+    padding: 10px 10px;
+    color: #FF5500;
+    background-color: #FFFFFF;
+    text-decoration: none;
+}
+
+#functionalities{
+    border-bottom: 1px solid gray;
+}
+
+#fun-list{
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fun-item{
+    font-size: 40px;
+}
+
+#why{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gray;
+}
+
+#why .btn{
+    display: block;
+}
+
+
+@media screen and (min-width: 481px){
+    main{
+        width: 70%;
+    }
+
+    #what-info{
+        width: 80%
+
+    }
+
+    #what-is button{
+        max-width: 40%;
+        display: block;
+        margin-bottom: 15px;
+    }
+    
+    #functionalities{
+        border-bottom: 1px solid gray;
+    }
+    
+    #fun-list{        
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        gap: 20px;
+    }
+    
+    .fun-item{
+        font-size: 70px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
     #what-is{
         flex-direction: row-reverse;
-        border-bottom: 1px solid gray;
     }
     
     #what-is img{
@@ -24,47 +93,24 @@ main{
     }
 
     .what-info{
-        flex-basis: 45%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
         margin-right: 15px;
         margin-bottom: 20px;
     }
 
-    .btn{
-        border: 1px solid #FF5500;
-        border-radius: 3px;
-        padding: 10px 36px;
-        color: #FF5500;
-        background-color: #FFFFFF;
-        text-decoration: none;
-    }
-
     #what-is button{
-        display: inline;
+        max-width: 40%;
+        display: block;
+    }
+    #what-is button{
+        display: block;
+        margin-bottom: 15px;
     }
 
 }
-
-
-#functionalities{
-    display: flex;
-    flex-direction: column;
-}
-
-#functionalities h2{
-}
-
-#fun-list{
-}
-
-.fun-item{
-}
-
-.fun-item h3{
-}
-
-.fun-item p{
-}
-
 
 
 #history img{
@@ -99,11 +145,11 @@ main{
     text-decoration: none;
     color: black;
 }
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
     .columns{
         flex-direction: row;
         justify-content: space-around;
-    }
+    } */
 
 /* main {
     display: flex;
@@ -152,14 +198,14 @@ main{
 }
 #help h2 {
     margin-top: 30px;
-}
+}*/
 
-.controls{
+/* .controls{
     border-radius: 3px;
     Width: 350px;
     Height: 37px;
     margin-top: 15px;
-}
+} 
 
 #help select {
     width: 360px;
@@ -188,4 +234,5 @@ main{
 
 #history img{
     margin-top: 30px;
-} */
+} 
+*/
