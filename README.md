@@ -5,10 +5,14 @@ And he has asked us to develop a website which we will call “Trackgenix".
 In this project we start to develop the page with html.
 ## semana-03
 In this project we start to design the page with css.
+## semana-04
+this week we work on the css code with flexbox and we made the responsive design page
+
 ## Order of use
 ```
-1. Download Semana-03 content
+1. Download Semana-04 content
 2. Navigate in style.css
+
 ```
 ### Created by 
 Cocci Sebastián
