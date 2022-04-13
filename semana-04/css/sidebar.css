@@ -6,9 +6,10 @@ aside{
 }
 
 aside p{
-    margin-left: 10px;
     text-align: left;
+    margin-left: 10px;
 }
+
 aside input{
     width: 70%;
     margin: 15px;
