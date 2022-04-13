@@ -1,4 +1,3 @@
-*{outline: 2px solid green}
 main{
     display: flex;
     flex-direction: column;
@@ -14,16 +13,22 @@ main{
     border-bottom: 1px solid gray;
 }
 
+#what-is h2{
+    margin-top: 0px;
+}
+
 #what-is img{
     align-self: center;
+    margin-bottom: 15px;
     width: 100%;
 }
 
 #what-is p{
     margin-bottom: 20px;
+    line-height: 2;
 }
 
-#what-is button{
+#what-is a{
     display: none;
 }
 
@@ -63,9 +68,18 @@ main{
 
 #why img{
     align-self: center;
+    width: 100%;
 }
 
-#why button{
+.item{
+    margin-top: 15px;
+}
+
+#why a{
+    display: block;
+    width: 40%;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 /*  FORM */
@@ -122,8 +136,22 @@ main{
 #history{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    }
+}
+#history img{
+    width: 100%;
+    order: 0;
+}
+
+#history div{
+    order: 1;
+    margin: 20px 0px;
+}
+
+#history div p{
+    margin-top: 10px;
+}
+
+
 
 
 @media screen and (min-width: 481px){
@@ -141,10 +169,10 @@ main{
         width: 80%;
     }
 
-    #what-is button{
+    #what-is a{
         display: block;
         margin-bottom: 15px;
-        align-self: baseline;
+        width: 25%;
     }
 
     /* FUNCTIONALITIES */
@@ -197,10 +225,9 @@ main{
         margin-bottom: 20px;
     }
 
-    #what-is button{
+    #what-is a{
         display: block;
         margin-bottom: 15px;
-        align-self: baseline;
     }
 
     #fun-list{
@@ -218,6 +245,7 @@ main{
     
     #why img{
         margin: 15px;
+        width: 100%;
     }
 
     .why-info{
@@ -230,140 +258,36 @@ main{
     }
 
     /*  OUR HISTORY */
-
+    
     #history{
         flex-direction: row;
     }
 
     #history img{
-        width: 40%;
-        height: auto;
-    }
-    .texth{
         width: 45%;
-        margin-left: 20px;
+    }
+    
+    #history div{
+        margin: 0px 20px;
+        width: 45%
     }
 
+    #history h2{
+        margin: 0px 10px
+    }
+    
+    #history div p{
+        margin-top: 10px;
+    }
 
-}
+/* PRODUCTS LIST */
 
-
-
-#history p{
-}
-
-.columns{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    /* justify-content: space-around; */
-}
-
-.box-list{
-}
-
-.c-item{
-}
-
-.c-item ol{
-}
-
-.c-item ol li{
-    margin: 10px 0px;
-}
-
-.c-item ol li a{    
-    text-decoration: none;
-    color: black;
-}
-/* @media screen and (min-width: 768px) {
-    .columns{
+    #columns{
+        display: flex;
         flex-direction: row;
         justify-content: space-around;
-    } */
+        margin-top: 30px;
+    }
 
-/* main {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 38px;
-    margin-right: 38px;
+
 }
-
-.btn {
-    border: 1px solid #FF5500;
-    border-radius: 3px;
-    display: inline-block;
-    padding: 10px 36px;
-    color: #FF5500;
-    background-color: #FFFFFF;
-    text-decoration: none;
-}
-
-#what-is img {
-    width: 400px;
-    height: 270px;
-    margin-top: 30px;
-}
-
-#what-is p {
-    line-height: 30px;
-    margin-top: 20px;
-}
-
-#what-is a {
-    display: none;
-}
-
-#why img {
-    width: 400px;
-    margin-top: 30px;
-}
-
-.us {
-    margin-top: 20px;
-    line-height: 30px;
-}
-
-#why a {
-    margin-top: 10px;
-}
-#help h2 {
-    margin-top: 30px;
-}*/
-
-/* .controls{
-    border-radius: 3px;
-    Width: 350px;
-    Height: 37px;
-    margin-top: 15px;
-} 
-
-#help select {
-    width: 360px;
-    height: 37px;
-    margin-top: 15px;
-    border-radius: 3px;
-    background-color: white
-}
-
-#help textarea {
-    Width: 350px;
-    Height: 97px;
-    border-radius: 3px;
-    margin-top: 15px;
-}
-
-#help .btn{
-    margin-top: 15px;
-    justify-items: space-between;
-}
-
-.btn-orange{
-    color: #FFFFFF;
-    background-color: #FF5500;
-}
-
-#history img{
-    margin-top: 30px;
-} 
-*/

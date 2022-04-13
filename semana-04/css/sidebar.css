@@ -1,21 +1,22 @@
 
-nav{
+aside{
     display: none;
     background: #DDDDDD;
     width: 20%;
 }
 
-nav p{
-    margin-left: 15px;
+aside p{
+    margin-left: 10px;
     text-align: left;
 }
-nav input{
+aside input{
     width: 70%;
     margin: 15px;
 }
 
 .bar{
     margin-left: 10px;
+    list-style: none;
 }
 
 .link{
@@ -27,7 +28,7 @@ nav input{
         display: flex;
         flex-direction: row;
     }
-    nav{
+    aside{
         display: block;
         flex: 1;
     }
@@ -37,7 +38,7 @@ nav input{
 }
 
 @media screen and (min-width: 1024px) {
-    nav{
+    aside{
         display: block;
     }
 }
