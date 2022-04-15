@@ -1,8 +1,9 @@
-#Radium Rocket
-![](semana-04\img\RadiumRocket.jpg)
+# Radium Rocket
+
  Radium Rocket is a software professional services company that builds engineering teams who develop leading mobile and web products.
 
-This company offers a course called "become softward professional" which trains people on programming languages
+This company offers a course called "become softward professional" which trains people on programming languages.
+
 [Radium Rocket](https://radiumrocket.com/ "Radium Rocket")
 
 ## Tranckgenix
@@ -17,8 +18,8 @@ this week we work on the css code with flexbox and we made the responsive design
 
 ## Order of use
 ```
-1. Download Semana-04 content
-2. Navigate in style.css
+1. Download Semana-05 content
+2. Navigate in js exercises
 
 ```
 ### Created by 
