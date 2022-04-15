@@ -1,4 +1,5 @@
 # Radium Rocket
+![RadiumRocket](https://media-exp1.licdn.com/dms/image/C4D1BAQF0huduinHBaQ/company-background_10000/0/1644595154041?e=2147483647&v=beta&t=QWei-uBhy9vvUL8u3eYHpe-ZwCq1rJCj_8EDcbw67jA)
 
  Radium Rocket is a software professional services company that builds engineering teams who develop leading mobile and web products.
 
