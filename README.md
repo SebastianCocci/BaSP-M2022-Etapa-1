@@ -21,8 +21,11 @@ This week we have to solve the JavaScript exercises taking into account and appl
 
 ## Order of use
 ```
-1. Download Semana-05 content
-2. Navigate in js exercises
+1. Login to git hub account, enter the repository "BaSP-M2022-Etapa-1". 
+2. Click on setting and serch git hub pages.
+3. Enter the link and add /semana-05/index.html.
+4. Open inspect and go where it says console.
+5. There you will find the JS exercises.
 
 ```
 ### Created by 
