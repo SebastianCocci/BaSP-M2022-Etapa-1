@@ -73,8 +73,12 @@ main{
     width: 100%;
 }
 
+.us{
+    margin: 0px;
+}
+
 .item{
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 #why a{
@@ -100,7 +104,8 @@ main{
 .controls{
     Width: 100%;
     Height: 37px;
-    border-radius: 3px;
+    border-radius: 3px; 
+    margin-bottom: 10px;
 }
 
 #help select {
@@ -126,7 +131,6 @@ main{
 
 #help .btn{
     margin-top: 15px;
-    width: 90px;
 }
 
 .btn-orange{
@@ -140,7 +144,6 @@ main{
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    margin-bottom: ;
     border-bottom: 1px solid gray;
 }
 
@@ -159,7 +162,14 @@ main{
     margin-bottom: 15px;
 }
 
-margin-top: 10px;
+/* PRODUCTS LIST */
+
+#columns{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
 
 @media screen and (min-width: 481px){
 
@@ -171,6 +181,10 @@ margin-top: 10px;
 
     #what-info{
         width: 80%
+    }
+    
+    #what-is p{
+        font-size: 14px;
     }
 
     #what-is img{
@@ -195,6 +209,12 @@ margin-top: 10px;
         width: 10%;
     }
 
+    /*  WHY TRACKGENIX */
+
+    .item{
+        font-size: 14px;
+    }
+
     /* FORM */
 
     #help form{
@@ -213,9 +233,25 @@ margin-top: 10px;
         gap: 0px 40px;
         margin-bottom: 20px;
     }
+
+    /*  OUR HISTORY */
+
+    #history div p{
+    font-size: 14px;
+    }
+
+    /* PRODUCTS LIST */
+
+    .c-list{
+        font-size: 14px;
+    }
+
 }
 
 @media screen and (min-width: 1024px) {
+
+    /*  WHAT IS */
+
     #what-is{
         flex-direction: row-reverse;
     }
@@ -229,7 +265,6 @@ margin-top: 10px;
         display: flex;
         flex-direction: column;
         width: 100%;
-        justify-content: space-between;
         margin-right: 15px;
         margin-bottom: 20px;
     }
@@ -237,7 +272,10 @@ margin-top: 10px;
     #what-is a{
         display: block;
         margin-bottom: 15px;
+        margin-top: 20px;
     }
+
+    /* FUNCTIONALITIES */
 
     #fun-list{
         margin-bottom: 30px;
@@ -248,6 +286,8 @@ margin-top: 10px;
         width: 45%;
     }
 
+    /*  WHY TRACKGENIX */
+
     #why{
         flex-direction: row-reverse;
     }
@@ -257,11 +297,14 @@ margin-top: 10px;
         width: 100%;
     }
 
+    #why a{
+        margin-top: 20px;
+    }
+
     .why-info{
         display: flex;
         flex-direction: column;
         width: 100%;
-        justify-content: space-between;
         margin-right: 15px;
         margin-bottom: 20px
     }
@@ -289,7 +332,7 @@ margin-top: 10px;
         margin-top: 10px;
     }
 
-/* PRODUCTS LIST */
+    /* PRODUCTS LIST */
 
     #columns{
         display: flex;
