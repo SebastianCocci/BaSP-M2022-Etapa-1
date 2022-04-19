@@ -12,7 +12,8 @@ console.log ('-Exercise 4.a:');
 
 if (num >= 0.5){
     alert('Greater than 0,5');
-}else{
+}
+else{
     alert('Lower than 0,5');
 }
 
