@@ -11,9 +11,9 @@ console.log ('-Exercise 4.a:');
     console.log(num);
 
 if (num >= 0.5){
-    window.alert('Greater than 0,5');
+    alert('Greater than 0,5');
 }else{
-    window.alert('Lower than 0,5');
+    alert('Lower than 0,5');
 }
 
 /* Create a variable “Age” that contains an integer between 0 and 100
@@ -47,9 +47,9 @@ else if(age>=31, age<=60){
 }
 else if(age>=61, age<=75){
 /* between 61 and 75 years */    
-    alert('Elderly')
+    alert('Elderly');
 }
-else if(age>75){
+else{
 /* older than 75 years */    
-    alert('Old man')
+    alert('Old man');
 }

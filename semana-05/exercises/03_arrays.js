@@ -16,7 +16,7 @@ console.log ('-Exercise 3.b:');
 
 console.log('months in alphabetical order: ', months.sort());
 
-/* Agregar un elemento al principio y al final del array (utilizar unshift y push). */
+/* Add an element to the beginning and end of the array (use unshift and push). */
 
 console.log ('-Exercise 3.c:');
 
