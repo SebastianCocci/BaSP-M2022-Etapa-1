@@ -32,7 +32,7 @@ function validateAndSum(a, b){
         return a + b;
     }
 }
-var resultAlteredSum = sum(5, 's');
+var resultAlteredSum = sum(5, 'p');
 console.log(resultAlteredSum);
 
 /* c) Create a validate integer function that takes a number as a parameter and 

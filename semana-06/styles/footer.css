@@ -1,0 +1,21 @@
+footer{ 
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    border-top: 3px solid #FF5500;
+}
+
+.foot-l{
+    margin-top: 20px;
+}
+
+.foot-i{
+    display: inline-block;
+}
+
+.foot-i a{
+    color: black;
+}

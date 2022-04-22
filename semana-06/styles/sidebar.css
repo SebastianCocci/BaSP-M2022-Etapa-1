@@ -1,0 +1,45 @@
+
+aside{
+    display: none;
+    background: #DDDDDD;
+    width: 20%;
+}
+
+aside p{
+    text-align: left;
+    margin-left: 10px;
+}
+
+aside input{
+    width: 70%;
+    margin: 15px;
+}
+
+.bar{
+    margin-left: 10px;
+    list-style: none;
+}
+
+.link{
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 481px){
+    .conteiner{
+        display: flex;
+        flex-direction: row;
+    }
+    aside{
+        display: block;
+        flex: 1;
+    }
+    main{
+        flex: 3;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    aside{
+        display: block;
+    }
+}

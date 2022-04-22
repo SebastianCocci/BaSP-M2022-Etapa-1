@@ -35,7 +35,7 @@ console.log ('-Exercise 2.d:');
 
 var radiumRocket = 'radium Rocket';
 
-var firstLetter = radiumRocket.substring(0, 1).toUpperCase() ;
+var firstLetter = radiumRocket.substring(0, 1).toUpperCase();
 
 var lowerLetter = radiumRocket.substring(1).toLocaleLowerCase();
 
