@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/8bedfba391.js" crossorigin="anonymous"></script>
+        <script src="../javascript/sign-up.js"></script>
         <title>Sign up to Trackgenix S.A.</title>
         <link rel="stylesheet" href="../styles/reset.css"/>
         <link rel="stylesheet" href="../styles/styles.css"/>
@@ -42,50 +43,61 @@
             <main>
                 <section id="sign-up">
                     <h2>Create an account</h2>
-                    <form>
+                    <form id="sign-form">
                         <div>
                             <label>Name</label>
                             <input class="entryform" type="text" id="name" name="name" placeholder="Name">
+                            <span class="error-name"></span>
                         </div>
                         <div>
                             <label>Last name</label>
                             <input class="entryform" type="text" id="last-name" name="last-name" placeholder="Last Name">
+                            <span class="error-lastname"></span>
                         </div>
                         <div>
                             <label>Document number</label>
                             <input class="entryform" type="number" id="dni" name="id-number" placeholder="Document number">
+                            <span class="error-dni"></span>
                         </div>
                         <div>
                             <label>Date of birth</label>
                             <input class="entryform" type="date" id="birth-date" name="birth-date" placeholder="Date">
+                            <span class="error-datebirth"></span>
                         </div>
                         <div class="email">
                             <label>Email</label>
                             <input class="emailform" type="email" id="email" name="email" placeholder="Email">
+                            <span class="error-email"></span>
                         </div>
                         <div>
                             <label>Phone number</label>
                             <input class="entryform" type="number" id="phone-number" name="phone-number" placeholder="Number">
+                            <span class="error-cel"></span>
                         </div>
                         <div>
                             <label>Location</label>
                             <input class="entryform" type="text" id="location" name="location" placeholder="Location">
+                            <span class="error-locality"></span>
                         </div>
                         <div>
                             <label>Address</label>
                             <input class="entryform" type="text, number" id="address" name="address" placeholder="Address">
+                            <span class="error-address"></span>
                         </div>
                         <div>
                             <label>Postal code</code></label>
                             <input class="entryform" type="number" id="postal-code" name="postal-code" placeholder="Postal Code">
+                            <span class="error-postal"></span>
                         </div>
                         <div>
                             <label>Password</label>
                             <input class="entryform" type="password" id="password" name="password" placeholder="Password">
+                            <span class="error-"></span>
                         </div>
                         <div>
                             <label>Repeat password</label>
                             <input class="entryform" type="text" id="r-password" name="r-password" placeholder="Repeat password">
+                            <span class="error-"></span>
                         </div>
                     </form> 
                     <div class="button-conteiner">
