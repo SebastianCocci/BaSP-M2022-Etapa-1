@@ -6,6 +6,7 @@ footer{
     align-items: center;
     flex-direction: column;
     border-top: 3px solid #FF5500;
+    margin-bottom: 15px;
 }
 
 .foot-l{

@@ -5,7 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/8bedfba391.js" crossorigin="anonymous"></script>
-        <title>Trackgenix S.A.</title>
+        <script src="../javascript/login.js"></script>
+        <title>Login to Trackgenix S.A.</title>
         <link rel="stylesheet" href="../styles/reset.css"/>
         <link rel="stylesheet" href="../styles/styles.css"/>
         <link rel="stylesheet" href="../styles/header.css"/>
@@ -40,7 +41,30 @@
                 </ul>
             </aside>
             <main>
-                
+                <section id="login">
+                    <h2>Login</h2>
+                    <form class="login-box">
+                        <div class="input-conteiner">
+                            <label>Email</label>
+                            <input class="loginform" type="email" id="email" name="email" placeholder="Email">
+                            <span class="wrong"></span>
+                        </div>
+                        <div class="input-conteiner">
+                            <label>Password</label>
+                            <input class="loginform" type="password" id="password" name="password" placeholder="Enter password">
+                        </div>
+                        <div class="button-box">
+                            <button class="buttonlog" type="submit">Login</button>
+                        </div>
+                        <div class="checkbox">
+                            <input class="check-input" type="checkbox" id="rememberme" name="rememberme">
+                            <label>Remember me</label> 
+                        </div>
+                        <div class="link-forgot">
+                            <a href="login.html">Forgot password?</a> 
+                        </div>
+                    </form>
+                </section>
             </main>
         </div>
         <footer>

@@ -171,7 +171,7 @@ main{
 }
 
 
-@media screen and (min-width: 481px){
+@media screen and (min-width: 768px){
 
     main{
         width: 70%;
@@ -249,7 +249,7 @@ main{
 }
 
 @media screen and (min-width: 1024px) {
-
+    
     /*  WHAT IS */
 
     #what-is{

@@ -24,14 +24,13 @@ aside input{
     margin-top: 20px;
 }
 
-@media screen and (min-width: 481px){
+@media screen and (min-width: 768px){
     .conteiner{
         display: flex;
         flex-direction: row;
     }
     aside{
         display: block;
-        flex: 1;
     }
     main{
         flex: 3;
