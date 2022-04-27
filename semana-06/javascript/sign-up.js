@@ -20,14 +20,14 @@ window.onload = function (){
         function nameBlur() {
             for (i=0; i<name.value.length; i++) {
               if (!letters.includes(name.value[i])) {
-                errorName[0].textContent = 'only letters';
+                errorName[0].textContent = 'Please enter a valid name';
               }
             }
             if (name.value === '') {
-                errorName[0].textContent = 'please enter your name';
+                errorName[0].textContent = 'Please enter a name';
             }
             else if (name.value.length < 3) {
-                errorName[0].textContent = 'only letters and 3 or more';
+                errorName[0].textContent = 'Pleasae enter a valid name';
                 
             }
         }
@@ -46,14 +46,14 @@ window.onload = function (){
         function lastNameBlur() {
           for (i=0; i<lastName.value.length; i++) {
               if (!letters.includes(lastName.value[i])) {
-                  errorLastname[0].textContent = 'only letters';
+                  errorLastname[0].textContent = 'Please enter a valid last name';
                   }
               }
           if (lastName.value === '') {
-              errorLastname[0].textContent = 'please enter your name';
+              errorLastname[0].textContent = 'Please enter last name';
           }
           else if (lastName.value.length < 3) {
-              errorLastname[0].textContent = 'only letters and 3 or more';
+              errorLastname[0].textContent = 'Please enter a valid last name';
           }
         }
         function lastNameFocus() {
@@ -68,24 +68,21 @@ window.onload = function (){
         dni.addEventListener('blur', dniBlur);
         dni.addEventListener('focus', dniFocus);
         
-          function dniBlur() {
-              if (dni.value === '') {
-                  errorDni[0].textContent = 'please enter your D.N.I';
-              }
-              else if (dni.value.length < 7) {
-                  errorDni[0].textContent = 'mayor a 7 and only numbers';
-              }
-              else {
-                  for (i = 0; i < dni.value.length; i++) {
-                      if (!number.includes(dni.value[i])) {
-                          errorDni[0].textContent = 'only numbers';
-                      }
-                  }
-              }
-          }
-          function dniFocus() {
-              errorDni[0].textContent = '';
-          }
+        function dniBlur() {
+            if (dni.value == '') {
+                errorDni[0].textContent = 'Please enter a dni';
+            }
+            else if(isNaN(dni.value)){
+                span[0].textContent = 'It cant have letters';
+                dniValid = false;
+            }
+            else if (dni.value.length < 7) {
+                errorDni[0].textContent = 'the dni is to short';
+            }
+        }
+        function dniFocus() {
+            errorDni[0].textContent = '';
+        }
       
       
         //Date birth validation
@@ -98,10 +95,10 @@ window.onload = function (){
         
         function dateBlur() {
             if (dateBi.value === '') {
-                errorDatebi[0].textContent = 'please enter your date of birth';
+                errorDatebi[0].textContent = 'Please enter a date';
             }
             else if (Date.parse(dateBi.value)>Date.now()) {
-                errorDatebi[0].textContent = 'its no true';
+                errorDatebi[0].textContent = 'That date is not valid';
             }
         }
         function dateFocus() {
@@ -119,15 +116,15 @@ window.onload = function (){
         
           function celBlur() {
               if (phone.value === '') {
-                  errorCel[0].textContent = 'please enter your Celphone';
+                  errorCel[0].textContent = 'Please enter your number';
               }
               else if (phone.value.length != 10) {
-                  errorCel[0].textContent = 'only 10 numbers';
+                  errorCel[0].textContent = 'Enter a valid number';
               }
               else {
                   for (i = 0; i < phone.value.length; i++) {
                       if (!number.includes(phone.value[i])) {
-                          errorCel[0].textContent = 'only 10 numbers';
+                          errorCel[0].textContent = 'Enter only numbers';
                       }
                   }
               }
@@ -147,26 +144,26 @@ window.onload = function (){
           function addressBlur() {
               let validateAddress = address.value.split(' ');
               if (address.value === '') {
-                  errorAddress[0].textContent = 'please enter your address';
+                  errorAddress[0].textContent = 'Please enter an address';
               }
               else if (validateAddress[0].length < 5) {
-                  errorAddress[0].textContent = 'mayor a 7 and only numbers';
+                  errorAddress[0].textContent = 'Please enter a valid address';
               }
               else {
                   for (i = 0; i < validateAddress[0].length; i++) {
                       if (!letters.includes(validateAddress[0][i])) {
-                          errorAddress[0].textContent = 'First lettes';
+                          errorAddress[0].textContent = 'Please enter a valid address';
                       }
                   }
                   if (validateAddress[1]) {
                       for (i = 0; i < validateAddress[1].length; i++) {
                           if (!number.includes(validateAddress[1][i])) {
-                              errorAddress[0].textContent = 'only numbers';
+                              errorAddress[0].textContent = 'Please enter a valid address';
                           }
                       }
                   }
                   else {
-                      errorAddress[0].textContent = 'letters y numeros';
+                      errorAddress[0].textContent = 'Please enter a valid address';
                   }
               }
           }
@@ -187,14 +184,14 @@ window.onload = function (){
           function localBlur() {
               for (i = 0; i < location.value.length; i++) {
                   if (!lettersNum.includes(location.value[i])) {
-                      errorLocality[0].textContent = 'Text Alfanumerico';
+                      errorLocality[0].textContent = 'Please enter a valid location';
                   }
               }
               if (location.value === '') {
-                  errorLocality[0].textContent = 'please enter your location';
+                  errorLocality[0].textContent = 'Please enter a location';
               }
               else if (location.value.length < 4) {
-                  errorLocality[0].textContent = '3 or more caracters';
+                  errorLocality[0].textContent = 'Please enter a valid address';
               }
           }
           function localFocus() {
@@ -211,15 +208,15 @@ window.onload = function (){
         
         function postalBlur() {
               if (postal.value === '') {
-                  errorPostal[0].textContent = 'please enter your postal code';
+                  errorPostal[0].textContent = 'Please enter a postal code';
               }
               else if (postal.value.length < 4 || postal.value.length > 5) {
-                  errorPostal[0].textContent = '4 or 5 numbers';
+                  errorPostal[0].textContent = 'Postal code is too short';
               }
               else {
                   for (i = 0; i < postal.value.length; i++) {
                       if (!number.includes(postal.value[i])) {
-                          errorPostal[0].textContent = 'only numbers';
+                          errorPostal[0].textContent = 'Please enter a valid postal code';
                       }
                   }
               }
@@ -229,7 +226,7 @@ window.onload = function (){
           }
       
       
-          //emial validation
+        //emial validation
       
           var email = document.getElementById ('email');
           var errorEmail = document.getElementsByClassName ('error-email');
@@ -240,63 +237,110 @@ window.onload = function (){
           function emailBlur() {
               var validEmail = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
               if (email.value === '') {
-                  errorEmail[0].textContent = 'please enter a email';
+                  errorEmail[0].textContent = 'Please enter a email';
               }
               else if (!validEmail.test(email.value)) {
-                  errorEmail[0].textContent = 'please enter a valid email';
+                  errorEmail[0].textContent = 'Please enter a valid email';
               }
           }
           function emailFocus() {
               errorEmail[0].textContent = '';
           }
-      
-          //password validation
-      /* 
-          var password = document.getElementById ('password');
-          var errorPassword = document.getElementsByClassName ('error-password')
-      
-          password.addEventListener('blur', passwordBlur);
-          password.addEventListener('focus', passwordFocus);
-      
-          function passwordBlur() {
-              for (i = 0; i < password.value.length; i++) {
-                  if (!lettersNum.includes(password.value[i])) {
-                      errorPassword[0].textContent = 'Text Alfanumerico and no space';
-                  }
-              }
-              if (password.value === '') {
-                  errorPassword[0].textContent = 'please enter your location';
-              }
-              else if (password.value.length < 4) {
-                  errorPassword[0].textContent = '3 or more caracters';
-              }
-          }
-          function passwordFocus() {
-              errorPassword[0].textContent = '';
-          }
-      
-          //password validation2
-      
-          var password = document.getElementById ('password');
-          var errorPassword = document.getElementsByClassName ('error-password')
-      
-          password.addEventListener('blur', passwordBlur);
-          password.addEventListener('focus', passwordFocus);
-      
-          function passwordBlur() {
-              var validPassword = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
-              if (password.value === '') {
-                  errorPassword[0].textContent = 'please enter a passwprd';
-              }
-              else if (!validPassword.test(password.value)) {
-                  errorPassword[0].textContent = 'please enter a valid password';
-              }
-          }
-          function passwordFocus() {
-              errorPassword[0].textContent = '';
-          } */
+        
+        /* Validate Password */  
+        var password = document.getElementById ('password');
+        var errorPass = document.getElementsByClassName ('error-p1');
+
+        password.addEventListener('blur', passwordBlur);
+        password.addEventListener('focus', passwordFocus);
+
+        function passwordBlur(){
+            if(password.value.length == 0){
+                errorPass[0].textContent = 'Please enter a password';
+                passwordValid = false;
+            } else if(password.value.length < 8){
+                errorPass[0].textContent = 'Password is too short'; //si son menos de 8 tira error
+                passwordValid = false;
+            } else{
+                var contLetters = 0;
+                var contNumbers = 0;
+                for(var i = 0; i < password.value.length; i++){
+                    for(var j = 0; j < alphabet.length; j++){
+                        if(password.value.charAt(i) == alphabet[j]){
+                            contLetters += 1;
+                        }
+                    }
+                    for(var j = 0; j < numbers.length; j++){
+                        if(password.value.charAt(i) == numbers[j]){
+                            contNumbers += 1;
+                        }
+                    }
+                }
+                if(contLetters == 0 || contNumbers == 0){
+                    errorPass[0].textContent = 'Password needs numbers and letters';
+                    passwordValid = false;
+                } else if(contLetters + contNumbers !== password.value.length){
+                    errorPass[0].textContent = 'Password only accept numbers and letters';
+                    passwordValid = false;
+                }
+            }
+        }
+
+        function passwordFocus(){
+            errorPass[0].textContent = '';
+            passwordValid = true;
+        }
+
+        //Password2 validation
+
+        password2.addEventListener('blur', password2Blur);
+        password2.addEventListener('focus', password2Focus);
+
+        function password2Blur(){
+            if(password2.value.length == 0){
+                span[11].textContent = 'Please enter a password';
+                password2Valid = false;
+            } else if(password2.value.length < 8){
+                span[11].textContent = 'Password is too short'; //si son menos de 8 tira error
+                password2Valid = false;
+            } else{
+                var contLetters = 0;
+                var contNumbers = 0;
+                for(var i = 0; i < password2.value.length; i++){
+                    for(var j = 0; j < letters.length; j++){
+                        if(password2.value.charAt(i) == letters[j]){
+                            contLetters += 1;
+                        }
+                    }
+                    for(var j = 0; j < number.length; j++){
+                        if(password2.value.charAt(i) == number[j]){
+                            contNumbers += 1;
+                        }
+                    }
+                }
+                if(contLetters == 0 || contNumbers == 0){
+                    span[11].textContent = 'Password needs numbers and letters';
+                    password2Valid = false;
+                } else if(contLetters + contNumbers !== password2.value.length){
+                    span[11].textContent = 'Password only accept numbers and letters';
+                    password2Valid = false;
+                }
+            }
+        }
+
+        function password2Focus(){
+            span[11].textContent = '';
+            password2Valid = true;
+        }
 
 
+          document.getElementById ('button-create').onclick = function () {
+            if (errorName[0], errorLastname[0], errorDatebi [0], errorDni [0],
+                errorCel [0], errorLocality[0], errorAddress[0], errorPostal[0],
+                errorEmail[0], errorPassword[0], errorPassword2[0]) {
+                alert ('created your user');
+            }
+        }
 
 
 
