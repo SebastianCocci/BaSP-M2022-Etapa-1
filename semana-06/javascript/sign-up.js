@@ -248,7 +248,7 @@ window.onload = function (){
           }
         
         /* Validate Password */
-          
+
         var password = document.getElementById ('password');
         var errorPass = document.getElementsByClassName ('error-p1');
 
@@ -326,7 +326,7 @@ window.onload = function (){
                     errorPass2[0].textContent = 'Password needs numbers and letters';
                     password2Valid = false;
                 } else if(contLetters + contNumbers !== password2.value.length){
-                    rrorPass2[0].textContent = 'Password only accept numbers and letters';
+                    errorPass2[0].textContent = 'Password only accept numbers and letters';
                     password2Valid = false;
                 }
             }
@@ -341,7 +341,7 @@ window.onload = function (){
           document.getElementById ('button-create').onclick = function () {
             if (errorName[0], errorLastname[0], errorDatebi [0], errorDni [0],
                 errorCel [0], errorLocality[0], errorAddress[0], errorPostal[0],
-                errorEmail[0], errorPassword[0], errorPassword2[0]) {
+                errorEmail[0], errorPass[0], errorPass2[0]) {
                 alert ('created your user');
             }
         }
