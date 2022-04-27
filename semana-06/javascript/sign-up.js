@@ -247,7 +247,8 @@ window.onload = function (){
               errorEmail[0].textContent = '';
           }
         
-        /* Validate Password */  
+        /* Validate Password */
+          
         var password = document.getElementById ('password');
         var errorPass = document.getElementsByClassName ('error-p1');
 
@@ -304,7 +305,7 @@ window.onload = function (){
                 errorPass2[0].textContent = 'Please enter a password';
                 password2Valid = false;
             } else if(password2.value.length < 8){
-                rrorPass2[0].textContent = 'Password is too short'; //si son menos de 8 tira error
+                errorPass2[0].textContent = 'Password is too short'; //si son menos de 8 tira error
                 password2Valid = false;
             } else{
                 var contLetters = 0;
@@ -322,7 +323,7 @@ window.onload = function (){
                     }
                 }
                 if(contLetters == 0 || contNumbers == 0){
-                    rrorPass2[0].textContent = 'Password needs numbers and letters';
+                    errorPass2[0].textContent = 'Password needs numbers and letters';
                     password2Valid = false;
                 } else if(contLetters + contNumbers !== password2.value.length){
                     rrorPass2[0].textContent = 'Password only accept numbers and letters';
@@ -332,7 +333,7 @@ window.onload = function (){
         }
 
         function password2Focus(){
-            rrorPass2[0].textContent = '';
+            errorPass2[0].textContent = '';
             password2Valid = true;
         }
 
