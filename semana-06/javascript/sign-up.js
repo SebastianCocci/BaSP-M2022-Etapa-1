@@ -293,15 +293,18 @@ window.onload = function (){
 
         //Password2 validation
 
+        var password2 = document.getElementById ('password2');
+        var errorPass2= document.getElementsByClassName ('error-p2');
+
         password2.addEventListener('blur', password2Blur);
         password2.addEventListener('focus', password2Focus);
 
         function password2Blur(){
             if(password2.value.length == 0){
-                span[11].textContent = 'Please enter a password';
+                errorPass2[0].textContent = 'Please enter a password';
                 password2Valid = false;
             } else if(password2.value.length < 8){
-                span[11].textContent = 'Password is too short'; //si son menos de 8 tira error
+                rrorPass2[0].textContent = 'Password is too short'; //si son menos de 8 tira error
                 password2Valid = false;
             } else{
                 var contLetters = 0;
@@ -319,17 +322,17 @@ window.onload = function (){
                     }
                 }
                 if(contLetters == 0 || contNumbers == 0){
-                    span[11].textContent = 'Password needs numbers and letters';
+                    rrorPass2[0].textContent = 'Password needs numbers and letters';
                     password2Valid = false;
                 } else if(contLetters + contNumbers !== password2.value.length){
-                    span[11].textContent = 'Password only accept numbers and letters';
+                    rrorPass2[0].textContent = 'Password only accept numbers and letters';
                     password2Valid = false;
                 }
             }
         }
 
         function password2Focus(){
-            span[11].textContent = '';
+            rrorPass2[0].textContent = '';
             password2Valid = true;
         }
 
