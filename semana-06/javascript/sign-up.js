@@ -27,7 +27,7 @@ window.onload = function (){
                 errorName[0].textContent = 'Please enter a name';
             }
             else if (name.value.length < 3) {
-                errorName[0].textContent = 'Pleasae enter a valid name';
+                errorName[0].textContent = 'Is to short';
                 
             }
         }
@@ -53,7 +53,7 @@ window.onload = function (){
               errorLastname[0].textContent = 'Please enter last name';
           }
           else if (lastName.value.length < 3) {
-              errorLastname[0].textContent = 'Please enter a valid last name';
+              errorLastname[0].textContent = 'Is to short';
           }
         }
         function lastNameFocus() {
@@ -73,7 +73,7 @@ window.onload = function (){
                 errorDni[0].textContent = 'Please enter a dni';
             }
             else if(isNaN(dni.value)){
-                span[0].textContent = 'It cant have letters';
+                errorDni[0].textContent = 'Letters cannot be used';
                 dniValid = false;
             }
             else if (dni.value.length < 7) {
@@ -94,10 +94,10 @@ window.onload = function (){
         birthDate.addEventListener('focus', dateFocus);
         
         function dateBlur() {
-            if (dateBi.value === '') {
+            if (birthDate.value === '') {
                 errorDatebi[0].textContent = 'Please enter a date';
             }
-            else if (Date.parse(dateBi.value)>Date.now()) {
+            else if (Date.parse(birthDate.value)>Date.now()) {
                 errorDatebi[0].textContent = 'That date is not valid';
             }
         }
@@ -211,7 +211,7 @@ window.onload = function (){
                   errorPostal[0].textContent = 'Please enter a postal code';
               }
               else if (postal.value.length < 4 || postal.value.length > 5) {
-                  errorPostal[0].textContent = 'Postal code is too short';
+                  errorPostal[0].textContent = 'that zip code does not exist';
               }
               else {
                   for (i = 0; i < postal.value.length; i++) {
@@ -266,13 +266,13 @@ window.onload = function (){
                 var contLetters = 0;
                 var contNumbers = 0;
                 for(var i = 0; i < password.value.length; i++){
-                    for(var j = 0; j < alphabet.length; j++){
-                        if(password.value.charAt(i) == alphabet[j]){
+                    for(var j = 0; j < letters.length; j++){
+                        if(password.value.charAt(i) == letters[j]){
                             contLetters += 1;
                         }
                     }
-                    for(var j = 0; j < numbers.length; j++){
-                        if(password.value.charAt(i) == numbers[j]){
+                    for(var j = 0; j < number.length; j++){
+                        if(password.value.charAt(i) == number[j]){
                             contNumbers += 1;
                         }
                     }
@@ -304,32 +304,10 @@ window.onload = function (){
             if(password2.value.length == 0){
                 errorPass2[0].textContent = 'Please enter a password';
                 password2Valid = false;
-            } else if(password2.value.length < 8){
-                errorPass2[0].textContent = 'Password is too short'; //si son menos de 8 tira error
+            } else if(password2.value !== password.value){
+                errorPass2[0].textContent = 'The password are not the same';
                 password2Valid = false;
-            } else{
-                var contLetters = 0;
-                var contNumbers = 0;
-                for(var i = 0; i < password2.value.length; i++){
-                    for(var j = 0; j < letters.length; j++){
-                        if(password2.value.charAt(i) == letters[j]){
-                            contLetters += 1;
-                        }
-                    }
-                    for(var j = 0; j < number.length; j++){
-                        if(password2.value.charAt(i) == number[j]){
-                            contNumbers += 1;
-                        }
-                    }
-                }
-                if(contLetters == 0 || contNumbers == 0){
-                    errorPass2[0].textContent = 'Password needs numbers and letters';
-                    password2Valid = false;
-                } else if(contLetters + contNumbers !== password2.value.length){
-                    errorPass2[0].textContent = 'Password only accept numbers and letters';
-                    password2Valid = false;
-                }
-            }
+            } 
         }
 
         function password2Focus(){
@@ -342,7 +320,7 @@ window.onload = function (){
             if (errorName[0], errorLastname[0], errorDatebi [0], errorDni [0],
                 errorCel [0], errorLocality[0], errorAddress[0], errorPostal[0],
                 errorEmail[0], errorPass[0], errorPass2[0]) {
-                alert ('created your user');
+                alert ('Please complete the form');
             }
         }
 
