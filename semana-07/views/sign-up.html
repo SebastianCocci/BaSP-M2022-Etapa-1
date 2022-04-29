@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/8bedfba391.js" crossorigin="anonymous"></script>
+        <script src="../javascript/sign-up.js"></script>
+        <title>Sign up to Trackgenix S.A.</title>
+        <link rel="stylesheet" href="../styles/reset.css"/>
+        <link rel="stylesheet" href="../styles/styles.css"/>
+        <link rel="stylesheet" href="../styles/header.css"/>
+        <link rel="stylesheet" href="../styles/sign-up.css"/>
+        <link rel="stylesheet" href="../styles/sidebar.css"/>
+        <link rel="stylesheet" href="../styles/footer.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="htitle">
+                <a href="#" class="hamb"><i class="fa-solid fa-bars"></i></a>
+                <h1>Trackgenix S.A.</h1>
+            </div>
+            <ul class="iconlist">
+                <li class="icon"><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-square"></i></a></li>
+                <li class="icon"><a href="https://www.instagram.com/?hl=es-la"><i class="fa-brands fa-instagram"></i></a></li>
+                <li class="icon"><a href="https://twitter.com/?lang=es"><i class="fa-brands fa-twitter"></i></a></li>
+                <li class="icon"><a href="https://ar.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li class="icon"><a href="https://github.com/"><i class="fa-brands fa-github"></i></a></li>
+            </ul>   
+        </header>
+        <div class="conteiner">
+            <aside>
+                <input type="text" id="search" placeholder="Search">
+                <p>Menu</p>
+                <ul class="bar">
+                    <li class="link"><a href="../views/index.html">Home</a></li>
+                    <li class="link"><a href="../views/sign-up.html">Sign up</a></li>
+                    <li class="link"><a href="../views/login.html">Log in</a></li>
+                    <li class="link"><a href="#">Contact info.</a></li>
+                </ul>
+            </aside>
+            <main>
+                <section id="sign-up">
+                    <h2>Create an account</h2>
+                    <form id="sign-form">
+                        <div>
+                            <label>Name</label>
+                            <input class="entryform" type="text" id="name" name="name" placeholder="Name">
+                            <span class="error-name"></span>
+                        </div>
+                        <div>
+                            <label>Last name</label>
+                            <input class="entryform" type="text" id="last-name" name="last-name" placeholder="Last Name">
+                            <span class="error-lastname"></span>
+                        </div>
+                        <div>
+                            <label>Document number</label>
+                            <input class="entryform" type="text" id="dni" name="id-number" placeholder="Document number">
+                            <span class="error-dni"></span>
+                        </div>
+                        <div>
+                            <label>Date of birth</label>
+                            <input class="entryform" type="date" id="birth-date" name="birth-date" placeholder="Date">
+                            <span class="error-datebirth"></span>
+                        </div>
+                        <div class="email">
+                            <label>Email</label>
+                            <input class="emailform" type="email" id="email" name="email" placeholder="Email">
+                            <span class="error-email"></span>
+                        </div>
+                        <div>
+                            <label>Phone number</label>
+                            <input class="entryform" type="text" id="phone-number" name="phone-number" placeholder="Number">
+                            <span class="error-cel"></span>
+                        </div>
+                        <div>
+                            <label>Location</label>
+                            <input class="entryform" type="text" id="location" name="location" placeholder="Location">
+                            <span class="error-locality"></span>
+                        </div>
+                        <div>
+                            <label>Address</label>
+                            <input class="entryform" type="text, number" id="address" name="address" placeholder="Address">
+                            <span class="error-address"></span>
+                        </div>
+                        <div>
+                            <label>Postal code</code></label>
+                            <input class="entryform" type="number" id="postal-code" name="postal-code" placeholder="Postal Code">
+                            <span class="error-postal"></span>
+                        </div>
+                        <div>
+                            <label>Password</label>
+                            <input class="entryform" type="password" id="password" name="password" placeholder="Password">
+                            <span class="error-p1"></span>
+                        </div>
+                        <div>
+                            <label>Repeat password</label>
+                            <input class="entryform" type="text" id="password2" name="password2" placeholder="Repeat password">
+                            <span class="error-p2"></span>
+                        </div>
+                    </form> 
+                    <div class="button-conteiner">
+                        <button id="button-create" class="create" type="button">Create</button>
+                        <a href="login.html">Already have an account?</a>
+                    </div>
+                </section>                
+            </main>
+        </div>
+        <footer>
+            <ul class="foot-l">
+                <li class="foot-i"><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-square"></i></a></li>
+                <li class="foot-i"><a href="https://www.instagram.com/?hl=es-la"><i class="fa-brands fa-instagram"></i></a></li>
+                <li class="foot-i"><a href="https://twitter.com/?lang=es"><i class="fa-brands fa-twitter"></i></a></li>
+                <li class="foot-i"><a href="https://ar.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li class="foot-i"><a href="https://github.com/"><i class="fa-brands fa-github"></i></a></li>
+            </ul>
+            <p>Copyright © 2022 Trackgenix. All rights reserved.</p>
+        </footer>
+
+    </body>
+</html>

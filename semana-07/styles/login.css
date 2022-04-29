@@ -1,0 +1,70 @@
+#login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;  
+    padding: 30px;
+    margin: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2), 0 8px 16px rgba(0, 0, 0, .2);
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.input-conteiner{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 20px 10px;
+}
+
+.loginform{
+    border: none;
+    border-bottom: 1px solid black;
+    height: 30px;
+}
+
+.button-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 20px 10px;
+}
+
+.buttonlog{
+    width: 50%;
+    border: 1px solid #FF5500;
+    border-radius: 3px;
+    padding: 10px;
+    background-color: #FF5500;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.checkbox{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+#rememberme{
+    color: #FF5500;
+}
+
+.link-forgot{
+    align-self: flex-end;
+}
+
+form div span{
+    color: red;
+}

@@ -17,7 +17,13 @@ This week we start designing the page with css. giving a format and a style to t
 ## semana-04
 This week we work on the css code with flexbox and we made the responsive design page
 ## semana-05
-This week we have to solve the JavaScript exercises taking into account and applying all the concepts learned from the class and the asynchronous material.
+This week we have to solve the JavaScript exercises taking into account and applying all the concepts learned 
+from the class and the asynchronous material.
+## semana-06
+week objetive: Make the Sing Up and Log In pages with his respectives validations and alert.
+## semana-07
+This week we are going to send the data loaded in the form to a web server 
+using an HTTP request from JavaScript.
 
 ## Order of use
 ```
@@ -26,8 +32,13 @@ This week we have to solve the JavaScript exercises taking into account and appl
 3. Enter the link and add /semana-05/index.html.
 4. Open inspect and go where it says console.
 5. There you will find the JS exercises.
+6. In this link you will find a form, where you can complete your data with the different validations.
+7. Enter the link complete the form and press the send or create button
 
 ```
+## Link
+https://sebastiancocci.github.io/BaSP-M2022-Etapa-1/semana-06/views/index.html
+
 ### Created by 
 Cocci Sebastián
 ### Contact information
