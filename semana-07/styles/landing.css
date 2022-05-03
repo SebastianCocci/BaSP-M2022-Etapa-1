@@ -257,7 +257,7 @@ main{
     }
     
     #what-is img{
-        width: 100%;
+        width: 70%;
         margin-bottom: 20px;
     }
 
@@ -294,7 +294,7 @@ main{
     
     #why img{
         margin: 15px;
-        width: 100%;
+        width: 70%;
     }
 
     #why a{

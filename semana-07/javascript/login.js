@@ -1,24 +1,25 @@
-window.onload = function(){
-    var form = document.getElementsByClassName('login-box')
-    var button = document.getElementById('login')
-    
+window.onload = function(){    
 
     /* Email validation. */
 
     var email = document.getElementById('email')
     var errorEmail = document.getElementsByClassName('wrong');
+    var emailValidated = false; /* para el alert del final */
 
     email.addEventListener('blur', emailBlur);
     email.addEventListener('focus', emailFocus);
     
 
     function emailBlur(){
-        var regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+        var regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if(email.value === ''){
             errorEmail[0].textContent = 'Please enter email';
         }
         else if (!regexEmail.test(email.value)){
             errorEmail[0].textContent = 'Please enter a valid email';
+        }
+        else{
+            emailValidated = true;
         }
     }
     function emailFocus(){
@@ -29,6 +30,7 @@ window.onload = function(){
     
     var password = document.getElementById('password');
     var errorPass = document.getElementsByClassName('wrongpass');
+    var passwordValidated = false; //alerta final
 
     password.addEventListener('blur', passwordBlur);
     password.addEventListener('focus', passwordFocus);
@@ -60,6 +62,9 @@ window.onload = function(){
             } else if(contLetters + contNumbers !== password.value.length){
                 errorPass[0].textContent = 'Password only accept numbers and letters';
             }
+            else{
+                passwordValidated = true;
+            }
         }
     }
 
@@ -67,11 +72,41 @@ window.onload = function(){
         errorPass[0].textContent = '';
         }
 
-        document.getElementById ('button-create').onclick = function () {
-            if (errorEmail[0],errorPass[0]) {
-                alert ('Please complete the form');
-            }
+    /* final alert */
+
+    var button = document.getElementById('button-create')
+
+    button.addEventListener('click', submitClick);
+
+    function submitClick(){
+
+        if(emailValidated && passwordValidated){
+            const dataSend = `https://basp-m2022-api-rest-server.herokuapp.com/login?email=${email.value}&password=${password.value}`;
+            fetch(dataSend)
+                .then(function(response) {
+                    console.log(response);
+                    return response.json();
+                })
+                .then(function(responseJson) {
+                    if(responseJson.success){
+                        alert('Login successfull\n Email: ' + email.value + '\nPassword: ' + password.value);
+                    } else{
+                        throw new Error('salio mal');
+                    }
+                })
+                .catch(function(error) {
+                    alert('Error');
+                });
+        } 
+        else if(!emailValidated && !passwordValidated){
+            alert('Error: Email and password incorrect \nemail:' + email.value + '\npassword:' + password.value);
+        } 
+        else if(!emailValidated){
+            alert('Error: Email incorrect \nemail:' + email.value + '\npassword:' + password.value);
+        } 
+        else{
+            alert('Error: Password incorrect \nemail:' + email.value + '\npassword:' + password.value);
         }
-
-
+    }
+    
 }
