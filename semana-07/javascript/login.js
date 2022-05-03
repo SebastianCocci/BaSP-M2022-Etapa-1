@@ -98,7 +98,7 @@ window.onload = function(){
                         alert (responseJson.msg);
                     }
                 })
-                .catch(function(error) {                   
+                .catch(function(error) {
                     alert ('Error' + '\n' + error.msg);
                 });
         } 

@@ -100,7 +100,7 @@ window.onload = function (){
     }      
   
     //Date birth validation
-  
+
     var birth = document.getElementById('birth-date')
     var errorDatebi = document.getElementsByClassName ('error-datebirth');
     var birthValid = false;
@@ -125,6 +125,19 @@ window.onload = function (){
         birthValid = true;
     }
 
+    // YYYY-MM-DD -> MM/DD/YYYY
+    /* yyyy-mm-dd */
+    /* 0123456789 */
+
+    function fromYearMonthDayToMonthDayYear(date) {
+        var year = date.substr(0, 4);
+        var month = date.substr(5, 2);
+        var day = date.substr(8, 2);
+        var newDate = month.concat('/', day, '/', year)
+      
+        return newDate;
+    }
+
     //Celphone validation
 
     var phone = document.getElementById('phone-number')
@@ -134,7 +147,7 @@ window.onload = function (){
     phone.addEventListener('blur', celBlur);
     phone.addEventListener('focus', celFocus);
     
-      function celBlur() {
+    function celBlur() {
         if (phone.value === '') {
             errorCel[0].textContent = 'Please enter your number';
             phoneValid = false;
@@ -152,10 +165,11 @@ window.onload = function (){
             }
         }
     }
+
     function celFocus() {
         errorCel[0].textContent = '';
         phoneValid = true;
-      }
+    }
    
     //Address validation
 
@@ -246,6 +260,7 @@ window.onload = function (){
             }
         }
     }
+
     function postalFocus() {
         errorPostal[0].textContent = '';
         postalValid = true;
@@ -271,10 +286,11 @@ window.onload = function (){
               emailValid = false;
         }
     }
-      function emailFocus() {
+
+    function emailFocus() {
         errorEmail[0].textContent = '';
         emailValid = true;
-      }
+    }
     
     /* Validate Password */
 
@@ -289,10 +305,12 @@ window.onload = function (){
         if(password.value.length == 0){
             errorPass[0].textContent = 'Please enter a password';
             passwordValid = false;
-        } else if(password.value.length < 8){
+        } 
+        else if(password.value.length < 8){
             errorPass[0].textContent = 'Password is too short'; //si son menos de 8 tira error
             passwordValid = false;
-        } else{
+        } 
+        else{
             var contLetters = 0;
             var contNumbers = 0;
             for(var i = 0; i < password.value.length; i++){
@@ -307,11 +325,11 @@ window.onload = function (){
                     }
                 }
             }
-            if(contLetters == 0 || contNumbers == 0){
+        if(contLetters == 0 || contNumbers == 0){
                 errorPass[0].textContent = 'Password needs numbers and letters';
                 passwordValid = false;
-            } 
-            else if(contLetters + contNumbers !== password.value.length){
+        } 
+        else if(contLetters + contNumbers !== password.value.length){
                 errorPass[0].textContent = 'Password only accept numbers and letters';
                 passwordValid = false;
             }
@@ -353,32 +371,21 @@ window.onload = function (){
 
     button.addEventListener('click', submitClick);
 
-    function submitClick(e){
-        e.preventDefault(e);
+    function submitClick(){
         if(firstNameValid && lastNameValid && dniValid && birthValid && phoneValid && addressValid && locationValid && postalValid && emailValid && password2Valid && passwordValid){
-            alert('Login Successfull \nFirstName:' + firstName.value + '\nLastName:' + lastName.value + '\nDNI:' + dni.value + '\nBirth:' + birth.value + '\nPhone:' + phone.value + '\nAddress:' + address.value + '\nLocation:' + location.value + '\nPostal Code:' + postal.value + '\nEmail:' + email.value + '\nPassword:' + password.value + '\nPassword2:' + password2.value);
-            const dataSend = `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${firstName.value}&lastName=${lastName.value}&dni=${dni.value}&dob=${birth.value}&phone=${phone.value}&address=${address.value}&city=${location.value}&zip=${postal.value}&email=${email.value}&password=${password.value}`;
+            var dataSend = `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${firstName.value}&lastName=${lastName.value}&dni=${dni.value}&dob=${fromYearMonthDayToMonthDayYear(birth.value)}&phone=${phone.value}&address=${address.value}&city=${location.value}&zip=${postal.value}&email=${email.value}&password=${password.value}`;
             fetch(dataSend)
                 .then(function(response) {
                     return response.json();
                 })
                 .then(function(responseJson) {
-                    if(responseJson.success){
-                        console.log(responseJson)
-                        alert('Login Successfull \nFirstName:' + firstName.value + '\nLastName:' + lastName.value + 
-                        '\nDNI:' + dni.value + '\nBirth:' + birth.value + '\nPhone:' + phone.value + 
-                        '\nAddress:' + address.value + '\nLocation:' + location.value + '\nPostal Code:' + postal.value + 
-                        '\nEmail:' + email.value + '\nEmail2:' + email2.value + '\nPassword:' + password.value + 
-                        '\nPassword2:' + password2.value + '\n' + responseJson.msg);
-                    }
-                    else{
-                        console.log(responseJson)
-                        alert (responseJson.msg);
+                        if(responseJson.success){
+                        alert('Login Successfull \nFirstName:' + firstName.value + '\nLastName:' + lastName.value + '\nDNI:' + dni.value + '\nBirth:' + birth.value + '\nPhone:' + phone.value + '\nAddress:' + address.value + '\nLocation:' + location.value + '\nPostal Code:' + postal.value + '\nEmail:' + email.value + '\nPassword:' + password.value + '\nPassword2:' + password2.value + '\n' + responseJson.msg)
                     }
                 })
                 .catch(function(error) {
-                    alert ('Error' + '\n' + error.msg);
-                });
+                    console.log(error)
+                })
         }
         else if(!firstNameValid){
             alert('Error: First Name incorrect \nFirst Name:' + firstName.value);
