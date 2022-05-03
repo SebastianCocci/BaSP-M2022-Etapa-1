@@ -2,12 +2,12 @@ window.onload = function (){
         
     var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','ñ','o','p','q',
     'r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L',
-    'M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-    var number = ['0','1','2','3','4','5','6','7','8','9']
-    var symbol = ['!','$','%','/','(','=',')','_','-','>','<','*','+','?','¿','|','°',]
+    'M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+    var number = ['0','1','2','3','4','5','6','7','8','9'];
+    var symbol = ['!','$','%','/','(','=',')','_','-','>','<','*','+','?','¿','|','°',];
     var lettersNum = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','ñ','o','p','q',
     'r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L',
-    'M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9']
+    'M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9'];
 
     //name validation
   
@@ -347,7 +347,7 @@ window.onload = function (){
         password2Valid = true;
     }
 
-    /* final alert */
+    /* final alert, API validation */
 
     var button = document.getElementById('button-create');
 
@@ -357,21 +357,27 @@ window.onload = function (){
         e.preventDefault(e);
         if(firstNameValid && lastNameValid && dniValid && birthValid && phoneValid && addressValid && locationValid && postalValid && emailValid && password2Valid && passwordValid){
             alert('Login Successfull \nFirstName:' + firstName.value + '\nLastName:' + lastName.value + '\nDNI:' + dni.value + '\nBirth:' + birth.value + '\nPhone:' + phone.value + '\nAddress:' + address.value + '\nLocation:' + location.value + '\nPostal Code:' + postal.value + '\nEmail:' + email.value + '\nPassword:' + password.value + '\nPassword2:' + password2.value);
-            const dataSend = `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${firstName.value}&lastName=${lastName.value}&dni=${dni.value}&dob=${birth.value}&phone=${phone.value}&address=${address.value}&city=${city.value}&zip=${postal.value}&email=${email.value}&password=${password.value}`;
+            const dataSend = `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${firstName.value}&lastName=${lastName.value}&dni=${dni.value}&dob=${birth.value}&phone=${phone.value}&address=${address.value}&city=${location.value}&zip=${postal.value}&email=${email.value}&password=${password.value}`;
             fetch(dataSend)
                 .then(function(response) {
                     return response.json();
                 })
                 .then(function(responseJson) {
                     if(responseJson.success){
-                        alert('Login Successfull \nFirstName:' + firstName.value + '\nLastName:' + lastName.value + '\nDNI:' + dni.value + '\nBirth:' + birth.value + '\nPhone:' + phone.value + '\nAddress:' + address.value + '\nLocation:' + location.value + '\nPostal Code:' + postal.value + '\nEmail:' + email.value + '\nEmail2:' + email2.value + '\nPassword:' + password.value + '\nPassword2:' + password2.value) 
+                        console.log(responseJson)
+                        alert('Login Successfull \nFirstName:' + firstName.value + '\nLastName:' + lastName.value + 
+                        '\nDNI:' + dni.value + '\nBirth:' + birth.value + '\nPhone:' + phone.value + 
+                        '\nAddress:' + address.value + '\nLocation:' + location.value + '\nPostal Code:' + postal.value + 
+                        '\nEmail:' + email.value + '\nEmail2:' + email2.value + '\nPassword:' + password.value + 
+                        '\nPassword2:' + password2.value + '\n' + responseJson.msg);
                     }
                     else{
-                        throw new Error('Error');
+                        console.log(responseJson)
+                        alert (responseJson.msg);
                     }
                 })
                 .catch(function(error) {
-                    alert('Error')
+                    alert ('Error' + '\n' + error.msg);
                 });
         }
         else if(!firstNameValid){

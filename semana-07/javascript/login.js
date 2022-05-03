@@ -36,7 +36,9 @@ window.onload = function(){
     password.addEventListener('focus', passwordFocus);
 
     function passwordBlur(){
-        var alphabet = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+        var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','ñ','o','p','q',
+        'r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L',
+        'M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
         var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
         if(password.value.length == 0){
             errorPass[0].textContent = 'Please enter a password';
@@ -72,7 +74,7 @@ window.onload = function(){
         errorPass[0].textContent = '';
         }
 
-    /* final alert */
+    /* final alert, API validation */
 
     var button = document.getElementById('button-create')
 
@@ -82,20 +84,22 @@ window.onload = function(){
 
         if(emailValidated && passwordValidated){
             const dataSend = `https://basp-m2022-api-rest-server.herokuapp.com/login?email=${email.value}&password=${password.value}`;
+            alert ('login')
             fetch(dataSend)
                 .then(function(response) {
-                    console.log(response);
                     return response.json();
                 })
                 .then(function(responseJson) {
+                    console.log ('Json', responseJson)
                     if(responseJson.success){
-                        alert('Login successfull\n Email: ' + email.value + '\nPassword: ' + password.value);
+                        alert('Login successfull\nEmail: ' + email.value + '\nPassword: ' + password.value 
+                        + '\n' + responseJson.msg);
                     } else{
-                        throw new Error('salio mal');
+                        alert (responseJson.msg);
                     }
                 })
-                .catch(function(error) {
-                    alert('Error');
+                .catch(function(error) {                   
+                    alert ('Error' + '\n' + error.msg);
                 });
         } 
         else if(!emailValidated && !passwordValidated){

@@ -37,7 +37,7 @@ using an HTTP request from JavaScript.
 
 ```
 ## Link
-https://sebastiancocci.github.io/BaSP-M2022-Etapa-1/semana-06/views/index.html
+https://sebastiancocci.github.io/BaSP-M2022-Etapa-1/semana-07/views/index.html
 
 ### Created by 
 Cocci Sebastián
