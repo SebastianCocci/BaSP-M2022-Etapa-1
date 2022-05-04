@@ -136,7 +136,7 @@ window.onload = function (){
         return newDate;
     }
 
-    //Celphone validation
+    /* Celphone validation */
 
     var phone = document.getElementById('phone-number')
     var errorCel = document.getElementsByClassName ('error-cel');
@@ -169,7 +169,7 @@ window.onload = function (){
         phoneValid = true;
     }
    
-    //Address validation
+    /* Address validation */
 
     var address = document.getElementById('address');
     var errorAddress = document.getElementsByClassName ('error-address');
@@ -199,9 +199,8 @@ window.onload = function (){
         errorAddress[0].textContent = '';
         addressValid = true;
     }
-  
     
-    //Location validation
+    /* Location validation */
 
     var location = document.getElementById('location')
     var errorLocality = document.getElementsByClassName ('error-locality');
@@ -231,7 +230,7 @@ window.onload = function (){
         locationValid = true;
       }
   
-    //Postal Code validation
+    /* Postal Code validation */
   
     var postal = document.getElementById('postal-code')
     var errorPostal = document.getElementsByClassName ('error-postal');
@@ -264,7 +263,7 @@ window.onload = function (){
         postalValid = true;
     }
 
-    //emial validation
+    /* emial validation */
   
     var email = document.getElementById ('email');
     var errorEmail = document.getElementsByClassName ('error-email');
@@ -339,7 +338,7 @@ window.onload = function (){
         passwordValid = true;
     }
 
-    //Password2 validation
+    /* Password2 validation */
 
     var password2 = document.getElementById ('password2');
     var errorPass2= document.getElementsByClassName ('error-p2');
@@ -422,6 +421,8 @@ window.onload = function (){
             alert('Error: Password2 incorrect \nPassword2:' + password2.value);
         }
     }
+
+    /* Local storages */
 
     function saveDataInLS(data){
         localStorage.setItem('firstName', data.name);
