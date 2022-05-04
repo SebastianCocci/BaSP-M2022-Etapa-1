@@ -9,8 +9,6 @@ window.onload = function (){
     'r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L',
     'M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9'];
 
-    fillInputs();
-
     //name validation
   
     var firstName = document.getElementById ('name');
@@ -127,9 +125,7 @@ window.onload = function (){
         birthValid = true;
     }
 
-    // YYYY-MM-DD -> MM/DD/YYYY
-    /* yyyy-mm-dd */
-    /* 0123456789 */
+   /* date birdth format */
 
     function fromYearMonthDayToMonthDayYear(date) {
         var year = date.substr(0, 4);
@@ -367,6 +363,8 @@ window.onload = function (){
         password2Valid = true;
     }
 
+    fillInputs();
+
     /* final alert, API validation */
 
     var button = document.getElementById('button-create');
@@ -440,13 +438,15 @@ window.onload = function (){
 
     function fillInputs(){
         if(localStorage.getItem('firstName') !== null && localStorage.getItem('firstName') !== 'undefined'){
-            firstName.value = localStorage.getItem('name');
+            firstName.value = localStorage.getItem('firstName');
             lastName.value = localStorage.getItem('lastName');
             dni.value = localStorage.getItem('dni');
-            birth.value = localStorage.getItem('birth');
+            birth.value = localStorage.getItem('birth').substring(6, 10) + '-'
+			+ localStorage.getItem('birth').substring(0, 2) + '-'
+			+ localStorage.getItem('birth').substring(3, 5);
             phone.value = localStorage.getItem('phone');
             address.value = localStorage.getItem('address');
-            location.value = localStorage.getItem('city');
+            location.value = localStorage.getItem('City');
             postal.value = localStorage.getItem('postal');
             email.value = localStorage.getItem('email');
             password.value = localStorage.getItem('password');
