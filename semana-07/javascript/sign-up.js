@@ -9,6 +9,8 @@ window.onload = function (){
     'r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L',
     'M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9'];
 
+    fillInputs();
+
     //name validation
   
     var firstName = document.getElementById ('name');
@@ -379,8 +381,9 @@ window.onload = function (){
                     return response.json();
                 })
                 .then(function(responseJson) {
-                        if(responseJson.success){
+                    if(responseJson.success){
                         alert('Login Successfull \nFirstName:' + firstName.value + '\nLastName:' + lastName.value + '\nDNI:' + dni.value + '\nBirth:' + birth.value + '\nPhone:' + phone.value + '\nAddress:' + address.value + '\nLocation:' + location.value + '\nPostal Code:' + postal.value + '\nEmail:' + email.value + '\nPassword:' + password.value + '\nPassword2:' + password2.value + '\n' + responseJson.msg)
+                        saveDataInLS(responseJson.data);
                     }
                 })
                 .catch(function(error) {
@@ -419,6 +422,35 @@ window.onload = function (){
         } 
         else if(!password2Valid){
             alert('Error: Password2 incorrect \nPassword2:' + password2.value);
+        }
+    }
+
+    function saveDataInLS(data){
+        localStorage.setItem('firstName', data.name);
+        localStorage.setItem('lastName', data.lastName);
+        localStorage.setItem('dni', data.dni);
+        localStorage.setItem('birth', data.dob);
+        localStorage.setItem('phone', data.phone);
+        localStorage.setItem('address', data.address);
+        localStorage.setItem('City', data.city);
+        localStorage.setItem('postal', data.zip);
+        localStorage.setItem('email', data.email);
+        localStorage.setItem('password', data.password);
+    }
+
+    function fillInputs(){
+        if(localStorage.getItem('firstName') !== null && localStorage.getItem('firstName') !== 'undefined'){
+            firstName.value = localStorage.getItem('name');
+            lastName.value = localStorage.getItem('lastName');
+            dni.value = localStorage.getItem('dni');
+            birth.value = localStorage.getItem('birth');
+            phone.value = localStorage.getItem('phone');
+            address.value = localStorage.getItem('address');
+            location.value = localStorage.getItem('city');
+            postal.value = localStorage.getItem('postal');
+            email.value = localStorage.getItem('email');
+            password.value = localStorage.getItem('password');
+            password2.value = localStorage.getItem('password');
         }
     }
 
